@@ -1,0 +1,469 @@
+{% extends "sources/elementary/navigation.html" %}
+
+{% block title %} 基础－表单 {% endblock %}
+
+{% block is_active_elementary_form %} active {% endblock %}
+
+{% block real %}
+<section id="doc-form" class="section">
+    <div class="header">
+        <h2>表单<small>less/form</small></h2>
+    </div>
+    <div class="content">
+        <h3>表单元素组</h3>
+        <div class="desc">默认表单是上下结构的</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;form action="" method=""&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;邮箱&lt;/label&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="text" class="input input-w270h32" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;用户名&lt;/label&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="text" class="input input-w270h32" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form action="" method="">
+                    <div class="form-group">
+                        <label class="form-label">邮箱</label>
+                        <div class="form-controls">
+                            <input type="text" class="input input-w270h32" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">用户名</label>
+                        <div class="form-controls">
+                            <input type="text" class="input input-w270h32" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>左右结构的表单组</h3>
+        <div class="desc">在<code>&lt;form&gt;</code>中添加class<code>.form-horizontal</code></div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;form action="" method="" class="form-horizontal"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;邮箱&lt;/label&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="text" class="input input-w270h32" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;用户名&lt;/label&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="text" class="input input-w270h32" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form action="" method="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="form-label">邮箱</label>
+                        <div class="form-controls">
+                            <input type="text" class="input input-w270h32" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">用户名</label>
+                        <div class="form-controls">
+                            <input type="text" class="input input-w270h32" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>输入框</h3>
+        <div class="desc">mixin中定义了输入框的函数，通过传入高度宽度来把相关样式自动生成。为了保证输入框的尺寸统一，不可以在input.less之外的样式表中调用<code>.input-size(@width, @height)</code>函数，必须在input.less文件中定义一个class，比如<code>.input-w270h32</code>，然后页面上使用此class。</div>
+        <div class="desc">输入框的定义需要多个class，需要一个基础class和一个尺寸class，比如<code>&lt;input type="text" class="input input-w180h32" /&gt;</code></div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;input type="text" class="input input-w180h32" /&gt;
+&lt;input type="text" class="input input-w270h32" /&gt;
+&lt;input type="text" class="input input-w270h36" /&gt;
+&lt;input type="text" class="input input-w270h36" style="border-color:#fac98f; outline:0 none;" /&gt;
+
+&lt;div class="input-error"&gt;
+    &lt;input type="text" class="input input-w270h36" value="error" /&gt;
+&lt;/div&gt;
+&lt;div class="input-warning"&gt;
+    &lt;input type="text" class="input input-w270h36" value="warning" /&gt;
+&lt;/div&gt;
+&lt;div class="input-disable"&gt;
+    &lt;input type="text" class="input input-w270h36" disabled value="disable" /&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <input type="text" class="input input-w180h32" />
+                <hr class="typo-hrPush">
+                <input type="text" class="input input-w270h32" />
+                <hr class="typo-hrPush">
+                <input type="text" class="input input-w270h36" />
+                <hr class="typo-hrPush">
+                <input type="text" class="input input-w270h36" style="border-color:#fac98f; outline:0 none;" value="focus" />
+                <hr class="typo-hrPush">
+                <div class="input-error">
+                    <input type="text" class="input input-w270h36" value="error" />
+                </div>
+                <hr class="typo-hrPush">
+                <div class="input-warning">
+                    <input type="text" class="input input-w270h36" value="warning" />
+                </div>
+                <hr class="typo-hrPush">
+                <div class="input-disable">
+                    <input type="text" class="input input-w270h36" disabled value="disable" />
+                </div>
+            </div>
+        </div>
+
+        <h3>Radio 和 Checkbox</h3>
+        <div class="desc">radio和checkbox的结构需要在<code>&lt;div.form-group div.form-controls&gt;</code>下。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="form-group"&gt;
+    &lt;div class="form-controls"&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="radio" type="radio" id="radio1" /&gt;
+            &lt;label for="radio1"&gt;单选框&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="radio" type="radio" id="radio2" checked /&gt;
+            &lt;label for="radio2"&gt;选中的单选框&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="checkbox" type="checkbox" id="checkbox1" /&gt;
+            &lt;label for="checkbox1"&gt;多选框&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="checkbox" type="checkbox" id="checkbox2" checked /&gt;
+            &lt;label for="checkbox2"&gt;选中的多选框&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="checkbox" type="checkbox" id="checkbox3" /&gt;
+            &lt;label for="checkbox3"&gt;选中的多选框&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="checkbox" type="checkbox" id="checkbox4" checked /&gt;
+            &lt;label for="checkbox4"&gt;选中的多选框&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;div class="input-choose"&gt;
+            &lt;input class="checkbox" type="checkbox" id="checkbox5" /&gt;
+            &lt;label for="checkbox5"&gt;选中的多选框&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="form-group">
+                    <div class="form-controls">
+                        <div class="input-choose">
+                            <input class="radio" type="radio" id="radio1" />
+                            <label for="radio1">单选框</label>
+                        </div>
+                        <div class="input-choose">
+                            <input class="radio" type="radio" id="radio2" checked />
+                            <label for="radio2">选中的单选框</label>
+                        </div>
+                        <div class="input-choose">
+                            <input class="checkbox" type="checkbox" id="checkbox1" />
+                            <label for="checkbox1">多选框</label>
+                        </div>
+                        <div class="input-choose">
+                            <input class="checkbox" type="checkbox" id="checkbox2" checked />
+                            <label for="checkbox2">选中的多选框</label>
+                        </div>
+                        <br>
+                        <div class="input-choose">
+                            <input class="checkbox" type="checkbox" id="checkbox3" />
+                            <label for="checkbox3">选中的多选框</label>
+                        </div>
+                        <br>
+                        <div class="input-choose">
+                            <input class="checkbox" type="checkbox" id="checkbox4" checked />
+                            <label for="checkbox4">选中的多选框</label>
+                        </div>
+                        <br>
+                        <div class="input-choose">
+                            <input class="checkbox" type="checkbox" id="checkbox5" />
+                            <label for="checkbox5">选中的多选框</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Select</h3>
+        <div class="desc">由于在IE浏览器下select的高度等样式都不可调整，只能维持默认的样式。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;form method="" action="" class="form-horizontal"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;select&lt;/label&gt;
+        &lt;div class="form-controls form-parallel"&gt;
+            &lt;select&gt;
+                &lt;option&gt;1&lt;/option&gt;
+                &lt;option&gt;2&lt;/option&gt;
+                &lt;option&gt;3&lt;/option&gt;
+                &lt;option&gt;4&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;Normal&lt;/label&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="text" class="input input-w270h32" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form method="" action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="form-label">select</label>
+                        <div class="form-controls form-parallel">
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Normal</label>
+                        <div class="form-controls">
+                            <input type="text" class="input input-w270h32" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>Textarea</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;textarea class="textarea"&gt;在阳台上受风吹雨淋&lt;/textarea&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <textarea class="textarea">在阳台上受风吹雨淋</textarea>
+            </div>
+        </div>
+
+        <h3>Tip</h3>
+        <div class="desc">tip信息需要在input元素之后放置一个空结构，在input元素的id后面增加"_Tip"，才会在右方显示tip。否则就是Javascript自动生成的结构，在元素下方。<strong>规范中要求除了特殊地方之外，tip都在右方</strong>。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;错误tip&lt;/label&gt;
+    &lt;div class="form-controls input-error"&gt;
+        &lt;input type="text" class="input input-w270h32" id="error" /&gt;
+        &lt;span id="error_Tip" class="tip-inline"&gt;请完成输入&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+    &lt;label class="form-label"&gt;警告tip&lt;/label&gt;
+    &lt;div class="form-controls input-warning"&gt;
+        &lt;input type="text" class="input input-w270h32" id="warning" /&gt;
+        &lt;span id="warning_Tip" class="tip-inline"&gt;请完成输入&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="form-group">
+                    <label class="form-label">错误tip</label>
+                    <div class="form-controls input-error">
+                        <input type="text" class="input input-w270h32" id="error" />
+                        <span id="error_Tip" class="tip-inline">请完成输入</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">警告tip</label>
+                    <div class="form-controls input-warning">
+                        <input type="text" class="input input-w270h32" id="warning" />
+                        <span id="warning_Tip" class="tip-inline">请完成输入</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>日期选择器</h3>
+        <div class="desc">目前只需要将样式覆盖到输入框上面即可，输入框的禁止输入和日期控件的弹出都交由Javascript来处理</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;label class="form-label"&gt;日期&lt;/label&gt;
+&lt;div class="form-controls"&gt;
+    &lt;input type="text" class="input indicator-date" /&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form action="" method="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="form-label">日期</label>
+                        <div class="form-controls">
+                            <input type="text" class="input indicator-date" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>密码输入框大写提示</h3>
+        <div class="desc">用户在输入密码的时候大写锁定键（Capslock）会影响输入的数据，在开启大写锁定键的时候进行输入会显示出一个提示。但是不能够做到一按下capslock就显示提示和关闭之后取消提示，只能够在按下之后进行输入的时候做出变更。</div>
+        <div class="desc">需要在<code>.form-controls</code>上添加<code>.caps-tank</code>这个class。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;form action="" method="" class="form-horizontal"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;密码&lt;/label&gt;
+        &lt;div class="form-controls caps-tank"&gt;
+            &lt;input type="password" class="input input-w270h32" value="********" /&gt;
+            &lt;span class="icon icon-capsLock" style="display:block;" title="大写键已开启"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form action="" method="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="form-label">密码</label>
+                        <div class="form-controls caps-tank">
+                            <input type="password" class="input input-w270h32" value="********" />
+                            <span class="icon icon-capsLock" style="display:block;" title="大写键已开启"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>表单排相对定位</h3>
+        <div class="desc">在竖向的表单组显示的时候，有可能标题行不只是有一个元素，会有需要绝对定位的元素存在，这个时候不能给<code>.form-group</code>增加<code>position:relative</code>样式，这样会导致IE下面出现元素渲染的BUG，所以增加一个<code>.form-group-rela</code>的class供使用。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;form action="" method="" style="width:275px;"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;登录名&lt;/label&gt;
+        &lt;div class="form-controls" style="position: relative;"&gt;
+            &lt;input type="text" id="username" tabindex="1" name="username" value=""
+            class="input input-w270h36" placeholder="邮箱/手机号/用户名"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group form-group-rela"&gt;
+        &lt;label class="form-label"&gt;密码&lt;/label&gt;
+        &lt;a class="label-link" href="#" title="忘记密码？"&gt;忘记密码？&lt;/a&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="password" id="input2" tabindex="2" name="password" 
+            class="input input-w270h36" placeholder="密码"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form action="" method="" style="width:275px;">
+                    <div class="form-group">
+                        <label class="form-label">登录名</label>
+                        <div class="form-controls" style="position: relative;">
+                            <input type="text" id="username" tabindex="1" name="username" value="" class="input input-w270h36" placeholder="邮箱/手机号/用户名">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-rela">
+                        <label class="form-label">密码</label>
+                        <a class="label-link" href="#" title="忘记密码？">忘记密码？</a>
+                        <div class="form-controls">
+                            <input type="password" id="input2" tabindex="2" name="password" class="input input-w270h36" placeholder="密码">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>表单的action栏</h3>
+        <div class="desc">由于表单的结构的问题，导致IE6下出现3px的bug，在action按钮栏增加一个class来控制上下对齐。只有<code>.form-horizontal</code>的表单，而且左侧没有元素的时候需要这个修正。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;form action="" method="" class="form-horizontal"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;登录名&lt;/label&gt;
+        &lt;div class="form-controls" style="position: relative;"&gt;
+            &lt;input type="text" id="username" tabindex="1" name="username" value=""
+            class="input input-w270h36" placeholder="邮箱/手机号/用户名"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="form-label"&gt;密码&lt;/label&gt;
+        &lt;div class="form-controls"&gt;
+            &lt;input type="password" id="input2" tabindex="2" name="password"
+            class="input input-w270h36" placeholder="密码"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;div class="form-controls form-actions"&gt;
+            &lt;span class="btn btn-shine-default"&gt;
+                &lt;button class="btn-inner"&gt;提交确认&lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <form action="" method="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="form-label">登录名</label>
+                        <div class="form-controls" style="position: relative;">
+                            <input type="text" id="username" tabindex="1" name="username" value="" class="input input-w270h36" placeholder="邮箱/手机号/用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">密码</label>
+                        <div class="form-controls">
+                            <input type="password" id="input2" tabindex="2" name="password" class="input input-w270h36" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-controls form-actions">
+                            <span class="btn btn-shine-default">
+                                <button class="btn-inner">提交确认</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "sources/home/navigation.html" %}
+
+{% block is_active_home_index %} active {% endblock %}
+
+{% block title %} 首页 {% endblock %}
+
+{% block real %}
+<div id="jw-index">
+    <div class="jumbtron">
+        <div class="jumbtron-inner">
+            <h1>精卫</h1>
+            <p class="de">炎帝之少女 名曰女娃 女娃游于東海 溺而不返 故為精衛 常銜西山之木石 以湮于東海</p>
+            <div class="button">
+                <span class="btn btn-shine-large">
+                    <a href="" class="btn-inner">查看组织方式</a>
+                </span>
+            </div>
+            <div>Current Version: 0.2.3</div>
+        </div>
+    </div>
+
+    <div class="division">
+        <a href="www.xyz.cn" class="link-blue">www.xyz.cn</a>
+        <a href="http://www.lesscss.net/article/home.html" class="link-blue">lesscss.net</a>
+    </div>
+
+    <ul class="jw-block">
+        <li>
+            <h4 class="title">button</h4>
+            <p>添加了新的jade绿色按钮</p>
+        </li>
+        <li>
+            <h4 class="title">modal</h4>
+            <p>重构了弹出层的展示方式</p>
+        </li>
+    </ul>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,43 @@
+{% extends "sources/skeleton/navigation.html" %}
+
+{% block title %} 骨架－页面组织样式 {% endblock %}
+
+{% block is_active_skeleton_construct %} active {% endblock %}
+
+{% block real %}
+<section id="doc-construct" class="section">
+    <div class="header">
+        <h2>页面样式组织</h2>
+    </div>
+    <div class="content">
+        <h3>目录</h3>
+        <div class="desc">主工作路径为<code>/ins-web-apollo/src/main/webapp/assets</code>,内含less/ css/ img/ psd/四个目录。</div>
+        <div class="desc">
+            less目录存放的是基础less文件
+            <sup><abbr title="基本元素或者模块样式的文件，非常零碎">[1]</abbr></sup>
+            和单页面less文件
+            <sup><abbr title="每个页面原则上只有一个样式文件，也即是单页面的less文件，引用完成基本的less之后，再进行特殊部分进行样式添加或者覆盖修改。">[2]</abbr></sup>
+        </div>
+        <div class="desc">需要编译的less目录为<code>/assets/less/webpages</code>和<code>/assets/less/total</code>目录下的skeleton.less和skeleton-x1200.less。前者是给没有使用less组织页面的页面使用的，后者是给首页的响应式使用。</div>
+        <div class="desc">css目录内全都是单页面less文件生成的，除了一个previous.css文件（精简之后的global.css，主要包含头部、底部和弹出层等的样式）之外，不要修改此目录下的文件，改了也会被覆盖。</div>
+        <div class="desc">psd目录下大部分为拼图的源文件和需要经常维护的图片，留存psd方便修改，目录下readme.md文件记录了生成之后文件的存放位置，方便查找。</div>
+        <div class="desc">img目录下按照目录存放了常用图片。</div>
+
+        <h3>less文件以及命名方式</h3>
+        <div class="desc"><code>/assets/less</code>下的是基础less文件，按照用途来分文件夹存放。文档中每个大类都有一个文件夹，内含至少一个less文件。</div>
+        <div class="desc"><code>/assets/less/webpages</code>下的都是单页面文件</div>
+        <div class="desc">一个单独页面或者一整个模块（比如找回密码4个页面）使用一个less文件，命名尽量使用能代表页面或者模块意思的英文来命名。</div>
+        <div class="desc">如果一整个模块比较大的话，可以把less文件拆分，使用同一个文件前缀来保证文件的统一命名，比如join-reg.less, join-retrieve.less等。</div>
+
+        <h3>less文件内部</h3>
+        <div class="desc">页面头部一定要最先引入skeleton.less这个文件。</div>
+        <div class="desc"><img src="/img/less_file.png" /></div>
+        <div class="desc">另外在引用文件的时候，如果某个目录下面存在一个和目录名称相同的less文件，那么这个文件代表是其他文件的基础，也就代表着两件事情：①：这个文件在使用当前目录中其他less样式的时候一定要引入，是必须的；②：引入的顺序一定是这个文件先于目录中其他文件，否则又要发生一些奇怪的事情。</div>
+
+        <h3>过渡时期解决方案</h3>
+        <div class="desc">
+            由于存在新老页面交替的情况，有些页面使用less来组织，有些则不是，存在一个样式不统一的情况。所以把现有的骨架样式生成为css文件，让之前的全局样式global.css来import，保证了头部、页脚等公共部分的样式统一。
+        </div>
+    </div>
+</section>
+{% endblock %}

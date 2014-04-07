@@ -1,0 +1,23 @@
+//
+// Dropdown
+// --------
+
+.dropdown-menu {
+    position:relative;
+}
+
+.dropdown-remote {
+    position:relative;
+    .icon-dropdown {
+        .inline-block-ie67();
+        .arrow-size(10px,10px);
+        .arrow-direction(bottom, @color999999);
+    }
+}
+
+.dropdown-panel {
+    background: @dropdownPanelBackground;
+    border:1px solid @dropdownPanelBorderColor;
+    position:absolute;
+    z-index: @dropdownPanelZindex;
+}

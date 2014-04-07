@@ -1,0 +1,22 @@
+{% extends "sources/layout.html" %}
+
+{% block is_active_skeleton %} active {% endblock %}
+
+{% block deputy %}
+<li class="{% block is_active_skeleton_global %}{% endblock %}">
+    <a href="/skeleton_global">全局</a>
+</li>
+<li class="{% block is_active_skeleton_variable %}{% endblock %}">
+    <a href="/skeleton_variable">变量</a>
+</li>
+<li class="{% block is_active_skeleton_mixin %}{% endblock %}">
+    <a href="/skeleton_mixin">混入</a>
+</li>
+<li class="{% block is_active_skeleton_construct %}{% endblock %}">
+    <a href="/skeleton_construct">页面样式组织</a>
+</li>
+{% endblock %}
+
+{% block real %}
+{% endblock %}
+

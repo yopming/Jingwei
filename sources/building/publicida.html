@@ -1,0 +1,25 @@
+{% extends "sources/building/navigation.html" %}
+
+{% block title %} 建筑－广告 {% endblock %}
+
+{% block is_active_building_publicida %} active {% endblock %}
+
+{% block real %}
+<section id="doc-publicida" class="section">
+    <div class="header">
+        <h2>广告<small>less/publici</small></h2>
+    </div>
+    <div class="content">
+        <div class="desc">每一个广告位之间需要一定的间距，默认为10px的下边距。</div>
+        <div class="desc">由于广告的英文单词——ad或者是advertise都有可能被ad-block等广告屏蔽的浏览器插件屏蔽，所以将广告相关的class定义为publicida（取自西班牙语的publicidad，中文为广告的意思）。</div>
+        <h3>下边距</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="publici-da"&gt;...&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

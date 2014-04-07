@@ -1,0 +1,145 @@
+{% extends "sources/elementary/navigation.html" %}
+
+{% block title %} 基础－排版 {% endblock %}
+
+{% block is_active_elementary_typo %} active {% endblock %}
+
+{% block real %}
+<section id="doc-typo" class="section">
+    <div class="header">
+        <h2>排版<small>less/typo/</small></h2>
+    </div>
+    <div class="content">
+        <p>定义了缩写、代码、删除线、强调、标题、带有副标题的标题、hr、列表、打印样式、引用、上下标、文本截断以及大段文字文章使用的样式（orig）。</p>
+        <h3>abbr</h3>
+        <div class="desc">缩写</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;abbr title="etcetera"&gt;etc.&lt;/abbr&gt;
+&lt;acronym title="World Wide Web"&gt;WWW&lt;/acronym&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <!-- example start --!>
+                    <abbr title="etcetera">etc.</abbr>
+                    <acronym title="World Wide Web">WWW</acronym>
+                <!-- example end --!>
+                </div>
+            </div>
+        </div>
+
+        <h3>del</h3>
+        <div class="desc">删除线</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;del&gt;To be deleted&lt;/del&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <del>To be deleted</del>
+            </div>
+        </div>
+
+        <h3>Emphasis</h3>
+        <div class="desc">强调</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;p&gt;This is the normal and&lt;small&gt; this is the smaller.&lt;/small&gt;&lt;/p&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <p>This is the normal and<small> this is the smaller.</small></p>
+            </div>
+        </div>
+
+        <h3>Heading</h3>
+        <div class="desc">标题和带有副标题的样式</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="typo-headingWith"&gt;
+    &lt;h1 class="heading typo-size24"&gt;Main Heading&lt;/h1&gt;
+    &lt;div class="support"&gt;Seconday description and detail information.&lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h1 class="typo-heading typo-size24"&gt;Single Heading&lt;/h1&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="typo-headingWith">
+                    <h1 class="heading typo-size24">大标题</h1>
+                    <div class="support">这是一些说明信息。</div>
+                </div>
+                <br>
+                <h1 class="typo-heading typo-size24">大标题</h1>
+            </div>
+        </div>
+
+        <h3>hr</h3>
+        <div class="desc">分割线</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;hr class="typo-hrLine" /&gt;
+&lt;hr class="typo-hrPush" /&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <hr class="typo-hrLine" />
+            </div>
+            <div class="rule-code-example">
+                <hr class="typo-hrPush" />
+            </div>
+        </div>
+
+        <h3>quote</h3>
+        <div class="desc">引用</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;q&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/q&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/blockquote&gt;
+&lt;/blockquote&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q>
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </blockquote>
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </blockquote>
+                </blockquote>
+            </div>
+        </div>
+
+        <h3>sub and sup</h3>
+        <div class="desc">上标下标</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums type-orig">
+&lt;p&gt;&lt;sub&gt;党&lt;/sub&gt;你孤单你会想起谁&lt;sup&gt;TM&lt;/sup&gt;&lt;/p&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <p><sub>党</sub>你孤单你会想起谁<sup>TM</sup></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

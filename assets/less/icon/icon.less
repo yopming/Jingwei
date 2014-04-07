@@ -1,0 +1,86 @@
+//
+// Icon
+// <span class="icon icon-weibo"></span> 两个class搭配完成一个图标的构建
+// ----
+
+.icon {
+    display:inline-block;
+    *margin-right: 0.3em;
+    vertical-align:middle;
+    background-repeat:no-repeat;
+}
+
+// Social site icons, ex:weibo, qq .etc
+// ------------------------------------
+.icon-weibo,
+.icon-other {
+    width:18px;
+    height:14px;
+    line-height:14px;
+    margin-top:1px;
+    background-image:url(/assets/img/icon/icon-social.png);
+}
+
+.icon-weibo {
+    vertical-align:text-top;
+    background-position:0 0;
+}
+
+// Function icons, ex: lock, tel, cart, q&a...
+.icon-lock,
+.icon-capsLock,
+.icon-calculator,
+.icon-arrow-up,
+.icon-arrow-down {
+    background-image:url(/assets/img/icon/icon-function.png);
+}
+
+.icon-lock {
+    .size(14px, 16px);
+    background-position:-3px -2px;
+}
+
+.icon-capsLock {
+    .size(19px, 20px);
+    background-position:-20px 0;
+}
+
+.icon-calculator {
+    .size(15px, 16px);
+    background-position:-41px -2px;
+}
+
+.icon-arrow-up,
+.icon-arrow-down {
+    .size(12px, 10px);
+}
+.icon-arrow-up {
+    background-position:-59px -5px;
+}
+.icon-arrow-down {
+    background-position:-73px -5px;
+}
+
+// Tip Alert icons, 报错、成功、警告、信息的小icon
+.icon-error,
+.icon-info,
+.icon-warning,
+.icon-suc {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    vertical-align:middle;
+}
+
+.icon-error {
+  background: url(/assets/img/icon/mark-16-error.png) no-repeat;
+}
+.icon-info {
+  background: url(/assets/img/icon/mark-16-info.png) no-repeat;
+}
+.icon-warning {
+  background: url(/assets/img/icon/mark-16-warning.png) no-repeat;
+}
+.icon-suc {
+  background: url(/assets/img/icon/mark-16-suc.png) no-repeat;
+}

@@ -1,0 +1,105 @@
+//
+// Completely Automated Public Turing test to tell Computers and Humans Apart
+// --------------------------------------------------------------------------
+
+.captcha {
+    width:270px;
+    height:54px;
+    table-layout:fixed;
+    td {
+        padding:0;
+        margin:0;
+        vertical-align:middle;
+    }
+    .form-horizontal & .form-controls,
+    .form-controls {
+        padding:0;
+        margin:0;
+    }
+    .hold {
+        height:32px;
+        .typeIn {
+            width:96px;
+            height:20px;
+            margin-right:10px;
+            border:1px solid @formBorderColor;
+            padding:5px 6px;
+            &:focus {
+                border-color: @formFocusBorderColor;
+            }
+        }
+        .input-error .typeIn,
+        .input-warning .typeIn {
+            border-width:2px;
+            border-style:solid;
+            padding:4px 5px;
+        }
+        .input-error .typeIn,
+        .input-error .typeIn:focus {
+            border-color: @inputErrorBorderColor;
+        }
+        .input-warning .typeIn,
+        .input-warning .typeIn:focus {
+            border-color: @inputWarningBorderColor;
+        }
+
+        .img {
+            border:1px solid #ccc;
+            width:80px;
+            height:30px;
+        }
+        .refreshCell,
+        .audioCell {
+            width:33px;
+            height:32px;
+        }
+        .audioWrap {
+            display:block;
+            width:18px;
+            height:18px;
+            position:absolute;
+            top:7px;
+            left:6px;
+        }
+        .refreshCell {
+            text-align:center;
+            vertical-align:middle;
+        }
+        .inner {
+            width:33px;
+            height:32px;
+            position:relative;
+        }
+        .audio {
+            display:block;
+        }
+        .refresh,
+        .audio {
+            display:inline-block;
+            width:18px;
+            height:18px;
+            background:url(/assets/img/captcha/actions.png) no-repeat;
+            .indent-text();
+            *display:block;
+        }
+        .refresh {
+            margin-left:1px;
+            background-position:0 -18px;
+        }
+        .sepCell {
+            width:1px;
+            height:26px;
+            padding-top:2px;
+            padding-bottom:2px;
+            vertical-align:middle;
+            .sep {
+                background:#ccc;
+                width:1px;
+                height:27px;
+            }
+        }
+    }
+    .msg {
+        height:22px;
+    }
+}

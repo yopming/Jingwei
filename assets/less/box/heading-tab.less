@@ -1,0 +1,30 @@
+//
+// Box - with tab style heading
+// ----------------------------
+
+.box-headingSlim {
+    ul.heading {
+        background: @boxHeadingHeadingBackground;
+        height:31px;
+        line-height:31px;
+        padding:0;
+        zoom:1;
+        .clearfix();
+        li {
+            width:109px;
+            float:left;
+            font-size:12px;
+            text-align:center;
+            cursor:pointer;
+            font-weight:normal;
+            border-left:1px solid @normalBorderColor;
+            margin-left:-1px;
+            &.now {
+                background:#fff;
+                font-weight:600;
+                cursor:default;
+                padding-bottom:1px;
+            }
+        }
+    }
+}

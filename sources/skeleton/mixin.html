@@ -1,0 +1,159 @@
+{% extends "sources/skeleton/navigation.html" %}
+
+{% block title %} 骨架－混入 {% endblock %}
+
+{% block is_active_skeleton_mixin %} active {% endblock %}
+
+{% block real %}
+<section id="doc-mixin" class="section">
+    <div class="header">
+        <h2>混入<small>less/mixin.less</small></h2>
+    </div>
+    <div class="content">
+        <p>可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。还可以带参数地调用，就像使用函数一样。</p>
+
+        <table cellspacing="0" cellpadding="0" class="rule-figure">
+            <col style="width:420px;" />
+            <col />
+            <tr>
+                <th>grow-up-down()</th>
+                <td>去除旧模板中头部的margin-bottom和底部的margin-top，防止出现背景色的断层</td>
+            </tr>
+            <tr>
+                <th>clearfix()</th>
+                <td>清除浮动</td>
+            </tr>
+            <tr>
+                <th>center()</th>
+                <td>block元素的居中</td>
+            </tr>
+            <tr>
+                <th>tab-focus()</th>
+                <td>重新定义focus状态下的outline，在使用tab键在页面中导航的时候会显示</td>
+            </tr>
+            <tr>
+                <th>size(@width, @height)</th>
+                <td>设置高度宽度</td>
+            </tr>
+            <tr>
+                <th>square(@size)</th>
+                <td>高度宽度一样的size</td>
+            </tr>
+            <tr>
+                <th>inline-block-ie67()</th>
+                <td>增加IE67hack的display:inline-block</td>
+            </tr>
+            <tr>
+                <th>input-size(@width, @height)</th>
+                <td>定义各种状态下的input的尺寸</td>
+            </tr>
+            <tr>
+                <th>arrow-derection(@direction, @color, @bgColor:transparent) when(@direction = top|right|bottom|left)</th>
+                <td>定义用CSS写出来的三角或者箭头（两个三角遮罩）。<br>@direction是箭头指向的方向，@color是前景色，@bgColor是背景色，默认透明。<br>需要搭配下面的 .arrow-size() 来使用，共同完成一个三角。</td>
+            </tr>
+            <tr>
+                <th>arrow-size(@width, @height)</th>
+                <td>定义CSS三角的尺寸，宽高只需要视觉稿上三角所在矩形的量取得尺寸。<br>比如三角的宽高为10px 5px，那么按照CSS的写法来看，所在矩形为10px 10px的宽高，这里把10px 10px当做参数穿进去即可。</td>
+            </tr>
+            <tr>
+                <th>placeholder(@color : @placeholderText)</th>
+                <td>定义placeholder的颜色</td>
+            </tr>
+            <tr>
+                <th>text-overflow()</th>
+                <td>文本截取</td>
+            </tr>
+            <tr>
+                <th>hide-text()</th>
+                <td>隐藏文本</td>
+            </tr>
+            <tr>
+                <th>indent-text()</th>
+                <td>文本缩进</td>
+            </tr>
+            <tr>
+                <th>min-height-ie67(@height)</th>
+                <td>定义最小高度</td>
+            </tr>
+            <tr>
+                <th>resizable(@direction)</th>
+                <td>定义textarea的是否可以变化大小</td>
+            </tr>
+            <tr>
+                <th>background-clip(@clip)</th>
+                <td>规定背景的绘制区域</td>
+            </tr>
+            <tr>
+                <th>background-size(@size)</th>
+                <td>背景图片大小</td>
+            </tr>
+            <tr>
+                <th>box-sizing(@boxmodel)</th>
+                <td>盒模型计算方式</td>
+            </tr>
+            <tr>
+                <th>user-select(@select)</th>
+                <td>是否可选取</td>
+            </tr>
+            <tr>
+                <th>
+                    border-radius(@radius)<br>
+                    border-top-left-radius(@radius)<br>
+                    border-top-right-radius(@radius)<br>
+                    border-bottom-right-radius(@radius)<br>
+                    border-bottom-left-radius(@radius)<br>
+                    border-top-radius(@radius)<br>
+                    border-right-radius(@radius)<br>
+                    border-left-radius(@radius)<br>
+                    border-bottom-radius(@radius)
+                </th>
+                <td>圆角</td>
+            </tr>
+            <tr>
+                <th>box-shadow(@shadow)</th>
+                <td>盒阴影</td>
+            </tr>
+            <tr>
+                <th>
+                    transition(@transition)<br>
+                    transition-delay(@transition)<br>
+                    transition-duration(@transition)
+                </th>
+                <td>过渡动画</td>
+            </tr>
+            <tr>
+                <th>
+                    rotate(@degress)<br>
+                    scale(@ratio)<br>
+                    translate(@x, @y)<br>
+                    skew(@x, @y)<br>
+                    translate3d(@x, @y, @z)
+                </th>
+                <td>变形</td>
+            </tr>
+            <tr>
+                <th>
+                    #gradient<br>
+                    .horizontal(@startColor, @endColor)<br>
+                    .vertical(@startColor, @endColor)<br>
+                    .directional(@startColor, @endColor)<br>
+                    .horizontal-three-colors(@startColor, @midColor, @endColor)<br>
+                    .vertical-three-colors(@startColor, @midColor, @endColor)<br>
+                    .radial(@innerColor, @outerColor)<br>
+                    .striped(@color, @angle)
+                </th>
+                <td>颜色渐变</td>
+            </tr>
+            <tr>
+                <th>backface-visibility(@visibility)</th>
+                <td>隐藏内容的背面</td>
+            </tr>
+            <tr>
+                <th>opacity(@opacity)</th>
+                <td>透明度</td>
+            </tr>
+        </table>
+
+    </div>
+</section>
+{% endblock %}

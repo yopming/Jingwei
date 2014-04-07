@@ -1,0 +1,67 @@
+// Component
+// Modal - popup layer
+// 弹出层
+// -------------------
+@import "../mixin";
+
+.modal-back {
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:10070;
+    background-color:rgb(0,0,0);
+    opacity:0.76;
+    filter: alpha(opacity=76);
+}
+
+.modal-mask {
+    position:absolute;
+    // Without 'width' property, IE67 will behavior strangely
+    width:540px;
+    z-index:10080;
+    background:#b2b5b7;
+    background:rgba(0,0,0,.2);
+    padding:6px;
+    display:none;
+    .modal-wrap {
+        background:#fff;
+    }
+
+    .modal-header {
+        height:50px;
+        background:#fff;
+        position:relative;
+        cursor:move;
+        overflow:hidden;
+        .close {
+            display:inline-block;
+            background:url(/assets/img/modal/modal-close.png) no-repeat;
+            cursor:pointer;
+            width:34px;
+            height:31px;
+            position:absolute;
+            top:0;
+            right:0;
+            .indent-text();
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin:0;
+            line-height:50px;
+            padding-left:20px;
+        }
+    }
+
+    .modal-body {
+        background:#fff;
+        position:relative;
+        padding:15px 20px 25px;
+    }
+}

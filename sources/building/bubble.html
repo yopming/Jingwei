@@ -1,0 +1,66 @@
+{% extends "sources/building/navigation.html" %}
+
+{% block title %} 建筑－气泡 {% endblock %}
+
+{% block is_active_building_bubble %} active {% endblock %}
+
+{% block real %}
+<section id="doc-bubble" class="section">
+    <div class="header">
+        <h2>气泡<small>less/bubble</small></h2>
+    </div>
+    <div class="content">
+        <h3>默认气泡</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="bubble-info"&gt;
+    &lt;span class="indicator"&gt;&lt;/span&gt;
+    &lt;div class="content"&gt;
+        请输入和谐的口号！
+        党性、智慧和善良只能存在两者。&lt;br&gt;
+        人生苦短，我用Python
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="bubble-info" style="position:relative;">
+                    <span class="indicator"></span>
+                    <div class="content">
+                        请输入和谐的口号！
+                        党性、智慧和善良只能存在两者。<br>
+                        人生苦短，我用Python
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>上方向气泡</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="bubble-info bubble-info-top"&gt;
+    &lt;span class="indicator"&gt;&lt;/span&gt;
+    &lt;div class="content"&gt;
+        请输入和谐的口号！
+        党性、智慧和善良只能存在两者。&lt;br&gt;
+        人生苦短，我用Python
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="bubble-info bubble-info-top" style="position:relative;">
+                    <span class="indicator"></span>
+                    <div class="content">
+                        请输入和谐的口号！
+                        党性、智慧和善良只能存在两者。<br>
+                        人生苦短，我用Python
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

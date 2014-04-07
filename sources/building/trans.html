@@ -1,0 +1,48 @@
+{% extends "sources/building/navigation.html" %}
+
+{% block title %} 建筑－圆角 {% endblock %}
+
+{% block is_active_building_trans %} active {% endblock %}
+
+{% block real %}
+<section id="doc-trans" class="section">
+    <div class="header">
+        <h2>圆角<small>less/trans</small></h2>
+    </div>
+    <div class="content">
+        <div class="desc">如果不需要四周的圆角，可以把其中的任意个点的元素删除。</div>
+        <div class="desc">默认遮罩点的背景为透明的，一般需要改变遮罩点的颜色。</div>
+        <div class="desc">这个方法主要是为了不支持CSS3的浏览器实现比较简单的1px圆角的时候使用的，可以搭配IE浏览器的条件判断使用。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div&gt;
+    &lt;!--[if lte IE 8]&gt;
+    &lt;div class="trans-holder"&gt;
+        &lt;s class="trans-point lt"&gt;&lt;/s&gt;
+        &lt;s class="trans-point lb"&gt;&lt;/s&gt;
+        &lt;s class="trans-point rt"&gt;&lt;/s&gt;
+        &lt;s class="trans-point rb"&gt;&lt;/s&gt;
+    &lt;![endif]--&gt;
+    &lt;div style="border:1px solid orange; height:100px;"&gt;&lt;/div&gt;
+    &lt;!--[if lte IE 8]&gt;
+    &lt;/div&gt;
+    &lt;![endif]--&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div>
+                    <div class="trans-holder">
+                        <s class="trans-point lt" style="background:#ddd;"></s>
+                        <s class="trans-point rt" style="background:#ddd;"></s>
+                        <s class="trans-point lb" style="background:#ddd;"></s>
+                        <s class="trans-point rb" style="background:#ddd;"></s>
+                        <div style="border:1px solid orange; height:100px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

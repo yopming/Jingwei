@@ -1,0 +1,27 @@
+//
+// Button - shine
+// red button
+// --------------
+
+.btn-shine {
+    height: @buttonShineHeight;
+    background-position: @buttonShineBackgroundPosition;
+    .btn-inner {
+        padding:0 @buttonShinePaddingHorizontal;
+        height: @buttonShineHeight;
+        line-height: @buttonShineLineHeight;
+        background-position: @buttonShineSpanBackgroundPosition;
+        font-size: @buttonNormalFontSize;
+        &,
+        &:hover {
+            color: @buttonShineColor;
+        }
+    }
+    &:hover {
+        background-position: @buttonShineHoverBackgroundPosition;
+        color: @buttonShineColor;
+        .btn-inner {
+            background-position: @buttonShineSpanHoverBackgroundPosition;
+        }
+    }
+}

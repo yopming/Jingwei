@@ -1,0 +1,82 @@
+//
+// Adrift - home service and navbar 
+// --------------------------------
+
+.adrift-service {
+    position:absolute;
+    z-index: @xyzAdriftZindex;
+    top:200px;
+    right:0;
+    .service {
+        .inline-block-ie67();
+        .size(100px, 120px);
+        .indent-text();
+        *float:left;
+        background:url(/assets/img/total/total.png) -141px -188px no-repeat;
+    }
+}
+
+.adrift-navbar {
+    @normalBorderColor: @colorFDCD99;
+    @hoverBorderColor: @colorFF7858;
+    position:absolute;
+    z-index: @xyzAdriftZindex;
+
+    .shoppingCart,
+    .shoppingCart:hover,
+    .goTop,
+    .goTop:hover {
+        .size(74px, 65px);
+        display:block;
+        background-image:url(/assets/img/total/total.png);
+        background-repeat:no-repeat;
+    }
+    .shoppingCart,
+    .goTop {
+        border:1px solid @normalBorderColor;
+    }
+    .shoppingCart {
+        background-position:-80px -468px;
+        border-bottom-style:dashed;
+        &:hover {
+            background-position:-80px -534px;
+            border-color: @hoverBorderColor;
+            border-bottom: 1px dashed @normalBorderColor;
+            text-decoration:none;
+        }
+        .num {
+            color: @colorFFFFFF;
+            font-size:16px;
+            width:30px;
+            text-align:center;
+            padding:6px 6px 0 25px;
+            display:block;
+        }
+    }
+    .goTop {
+        .indent-text();
+        background-position:0 -468px;
+        border-top:none;
+        &:hover {
+            background-position:0 -534px;
+            border-color: @hoverBorderColor;
+        }
+    }
+    .single.goTop {
+        border-top:1px solid @normalBorderColor;
+        &:hover {
+            border-color: @hoverBorderColor;
+        }
+    }
+    .compareSide {
+        .size(76px, 36px);
+        display:none;
+        background-color: @hoverBorderColor;
+        color: @colorFFFFFF;
+        text-align:center;
+        line-height:36px;
+        cursor:pointer;
+        font-weight:bold;
+        font-size:14px;
+    }
+}
