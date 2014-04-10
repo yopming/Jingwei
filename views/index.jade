@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  div.row
+    div.col-md-12
+      div.navbar.navbar-inverse
+        div.navbar-inner
+          div.container
+            ul.nav.navbar-nav
+              li.active
+                a(href="#") Overview
+              li
+                a(href="#") Skeleton
+              li
+                a(href="#") Elementary
+              li
+                a(href="#") Building
+              li
+                a(href="#") Dictionary
+
+  div.row.body
+    div.col-md-3.navi
+      ul.nav.nav-pills.nav-stacked
+        li.active
+          a 0. Overview
+        li
+          a 1. Layout
+        li
+          a 2. Form
+        li
+          a 3. Icon
+        li
+          a 4. Color
+
+    div.col-md-9.content
+      h2 Overview
+      p If you're visiting from the internet, feel free to learn from our style. This is a guide we use for our own apps internally at GitHub. We encourage you to set up one that works for your own team.
+      p While we port our styles over to SCSS with KSS documentation, please make sure to upgrade an entire element's CSS at once. Do not mix small amounts of SCSS in with plain CSS. Do your future self a favor.
+
+      div.example
+        h3 Coding Styleguide
+        p While we port our styles over to SCSS with KSS documentation.
+        ul
+          li Use soft-tabs with a two space indent.
+          li Use soft-tabs with a two space indent.
+          li Use soft-tabs with a two space indent.
+          li Use soft-tabs with a two space indent.
+        p Here is a good example:
+        div.example
+          button.btn.btn-default
+        div.example-source
+          pre
+            code
+              | &lt;button&gt;
+
