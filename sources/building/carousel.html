@@ -1,0 +1,111 @@
+{% extends "sources/building/navigation.html" %}
+
+{% block title %} 建筑－轮播 {% endblock %}
+
+{% block is_active_building_carousel %} active {% endblock %}
+
+{% block real %}
+<section id="doc-carousel" class="section">
+    <div class="header">
+        <h2>轮播<small>less/carousel</small></h2>
+    </div>
+    <div class="content">
+        <div class="desc">indicator元素不需要写在html中，js会自动拼起来。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="carousel"&gt;
+    &lt;div class="carousel-loading dev_loading" style="display: none;"&gt;&lt;/div&gt;
+    &lt;div id="home_banner_wrapper" class="carousel-inner"&gt;
+        &lt;a href="#"&gt;&lt;img src="/img/banner_0.jpg" alt="" width="760" height="270"&gt;&lt;/a&gt;
+        &lt;a href="#"&gt;&lt;img src="/img/banner_1.jpg" alt="" width="760" height="270"&gt;&lt;/a&gt;
+        &lt;a href="#"&gt;&lt;img src="/img/banner_2.jpg" alt="" width="760" height="270"&gt;&lt;/a&gt;
+        &lt;a href="#"&gt;&lt;img src="/img/banner_3.jpg" alt="" width="760" height="270"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="carousel">
+                    <div class="carousel-loading dev_loading" style="display: none;"></div>
+                    <div id="home_banner_wrapper" class="carousel-inner">
+                        <a href="#"><img src="/img/banner_0.jpg" alt="航空保险知多少？" width="760" height="270"></a>
+                        <a href="#"><img src="/img/banner_1.jpg" alt="火车险免费送！" width="760" height="270"></a>
+                        <a href="#"><img src="/img/banner_2.jpg" alt="把保险装进口袋去旅行！" width="760" height="270"></a>
+                        <a href="#"><img src="/img/banner_3.jpg" alt="运动达人必备！" width="760" height="270"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// banner carousel
+var Banner_Carousel = {delay: null,hoverDelay: null,next: 0,totalNum: $("#home_banner_wrapper > a > img").size(),pannelBox: $("#home_banner_wrapper"),images: $("#home_banner_wrapper > a > img"),indicator: $(".carousel-indicator").find("span"),init: function() {
+    var _this = this, span, i, j;
+    var spanDiv;
+    if (_this.totalNum == 0) {
+        return false
+    }
+    spanDiv = $("<div>").get(0);
+    spanDiv.className = "carousel-indicator";
+    $(_this.pannelBox).after(spanDiv);
+    for (i = 0, j = _this.totalNum; i < j; i++) {
+        span = $("<span>").get(0);
+        span.className = (i == 0) ? "cur" : "Normal";
+        $(span).html(i + 1);
+        $(spanDiv).append(span)
+    }
+    _this.showImg(0);
+    $(_this.images).each(function(index, n) {
+        $(this).hover(function() {
+            clearTimeout(_this.delay);
+            clearTimeout(_this.hoverDelay)
+        }, function() {
+            _this.showImg(index)
+        })
+    });
+    $(".carousel-indicator > span").hover(function() {
+        clearTimeout(_this.hoverDelay);
+        clearTimeout(_this.delay);
+        var $this = $(this);
+        _this.hoverDelay = setTimeout(function() {
+            var icon = parseInt($this.text());
+            _this._showDirect(icon - 1)
+        }, 100)
+    }, function() {
+        clearTimeout(_this.hoverDelay);
+        _this._delay()
+    })
+},showImg: function(showIndex) {
+    var _this = Banner_Carousel;
+    _this._showDirect(showIndex);
+    _this._delay()
+},_showDirect: function(index) {
+    var _this = Banner_Carousel;
+    $(".carousel-indicator").find("span").removeClass("cur").addClass("Normal");
+    $(".carousel-indicator").find("span").eq(index).removeClass("Normal").addClass("cur");
+    if (!$(_this.images).eq(index).is(":visible")) {
+        $(_this.images).hide().stop(true, true).eq(index).fadeIn("slow");
+        _this.next = index > _this.totalNum - 2 ? 0 : index + 1
+    }
+},_delay: function() {
+    var _this = Banner_Carousel;
+    _this.delay = setTimeout(function() {
+        _this.showImg(_this.next)
+    }, 5000)
+}};
+$(document).ready(function() {
+    $(".dev_loading:eq(0)").hide();
+    var children = $("#home_banner_wrapper").children();
+    if (!children || children.size() < 2) {
+        if ($("#home_banner_0").size() > 0) {
+            $("#home_banner_0").show()
+        }
+        return
+    }
+    Banner_Carousel.init()
+});
+</script>
+{% endblock %}

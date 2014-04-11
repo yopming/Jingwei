@@ -1,0 +1,324 @@
+{% extends "sources/elementary/navigation.html" %}
+
+{% block title %} 基础－列表 {% endblock %}
+
+{% block is_active_elementary_list %} active {% endblock %}
+
+{% block real %}
+<section id="doc-list" class="section">
+    <div class="header">
+        <h2>列表<small>less/list</small></h2>
+    </div>
+    <div class="content">
+        <h3>square符号的列表</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;ul class="list-square"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <ul class="list-square">
+                    <li><a href="#">员工意外伤</a></li>
+                    <li><a href="#">员工意外伤</a></li>
+                    <li><a href="#">员工意外伤</a></li>
+                    <li><a href="#">员工意外伤</a></li>
+                    <li><a href="#">员工意外伤</a></li>
+                </ul>
+            </div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;ul&gt;
+    &lt;li class="list-square"&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <ul>
+                    <li class="list-square"><a href="#">员工意外伤</a></li>
+                    <li><a href="#">员工意外伤</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <h3>双栏等宽列表</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="yard-220"&gt;
+    &lt;div class="box-headingSlim"&gt;
+        &lt;h2 class="heading"&gt;人气产品搜索词&lt;/h2&gt;
+        &lt;div class="content"&gt;
+            &lt;ul class="list-bisects"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;员工意外伤&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example ly-clearFix">
+                <div class="yard-220">
+                    <div class="box-headingSlim">
+                        <h2 class="heading">人气产品搜索词</h2>
+                        <div class="content">
+                            <ul class="list-bisects">
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                                <li><a href="#">员工意外伤</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>list的hover样式</h3>
+        <div class="desc">li在hover的时候有背景颜色</div>
+        <div class="desc">一般还要配合额外样式，背景塞满整个li元素，参照<a href="http://www.xyz.cn/notice/list-381-1.html">公告列表页</a></div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;ul class="list-hover"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Quickly architect extensive synergy.&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Quickly architect extensive synergy.&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Quickly architect extensive synergy.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="rule-code-example rule-code-example-blank">
+                <ul class="list-hover">
+                    <li><a href="#">Quickly architect extensive synergy.</a></li>
+                    <li><a href="#">Quickly architect extensive synergy.</a></li>
+                    <li><a href="#">Quickly architect extensive synergy.</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>产品小列表</h3>
+        <div class="desc">目前多用于 浏览过的产品、推荐产品等</div>
+        <div class="desc">横向的列表需要增加一个<code>.list-prod-x</code>的class</div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;ul class=list-products"&gt;
+    &lt;li class="prd"&gt;
+        &lt;a href="#" class="prdPic"&gt;
+        &lt;img width="80" height="80" src="#"&gt;&lt;/a&gt;
+        &lt;div class="prdInfo"&gt;
+            &lt;a class="prdTitle" href="#"&gt;境外旅行综合及紧急救援保险-精英计划D&lt;/a&gt;
+            &lt;p&gt;&lt;del class="money"&gt;&lt;dfn&gt;¥&lt;/dfn&gt;103.00&lt;/del&gt;&lt;/p&gt;
+            &lt;p class="money"&gt;&lt;dfn&gt;¥&lt;/dfn&gt;&lt;span class="num"&gt;61.80&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="rule-code-example rule-code-example-blank">
+                <div class="yard-220" style="float:none; display:inline-block;">
+                    <div class="box-headingSlim">
+                        <h2 class="heading">最近浏览过的产品</h2>
+                        <div class="content">
+                            <ul class="list-products">
+                                <li class="prd">
+                                    <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                        <img width="80" height="80" src="#"></a>
+                                    <div class="prdInfo">
+                                        <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                        <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                        <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                    </div>
+                                </li>
+                                <li class="prd">
+                                    <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                        <img width="80" height="80" src="#"></a>
+                                    <div class="prdInfo">
+                                        <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                        <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                        <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                    </div>
+                                </li>
+                                <li class="prd">
+                                    <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                        <img width="80" height="80" src="#"></a>
+                                    <div class="prdInfo">
+                                        <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                        <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                        <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yard-300" style="float:none; display:inline-block;">
+                    <div class="box-headingSlim">
+                        <h2 class="heading">最近浏览过的产品</h2>
+                        <div class="content">
+                            <ul class="list-products">
+                                <li class="prd">
+                                    <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                        <img width="80" height="80" src="#"></a>
+                                    <div class="prdInfo">
+                                        <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                        <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                        <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                    </div>
+                                </li>
+                                <li class="prd">
+                                    <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                        <img width="80" height="80" src="#"></a>
+                                    <div class="prdInfo">
+                                        <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                        <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                        <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                    </div>
+                                </li>
+                                <li class="prd">
+                                    <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                        <img width="80" height="80" src="#"></a>
+                                    <div class="prdInfo">
+                                        <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                        <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                        <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-headingSlim">
+                    <h2 class="heading">最近浏览过的产品</h2>
+                    <div class="content">
+                        <ul class="list-products list-prod-x">
+                            <li class="prd">
+                                <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                    <img width="80" height="80" src="#"></a>
+                                <div class="prdInfo">
+                                    <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                    <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                    <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                </div>
+                            </li>
+                            <li class="prd">
+                                <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                    <img width="80" height="80" src="#"></a>
+                                <div class="prdInfo">
+                                    <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                    <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                    <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                </div>
+                            </li>
+                            <li class="prd">
+                                <a href="/mall/detail-px2gcp33.html" class="prdPic" target="_blank">
+                                    <img width="80" height="80" src="#"></a>
+                                <div class="prdInfo">
+                                    <a class="prdTitle" href="#">境外旅行综合及紧急救援保险-精英计划D</a>
+                                    <p><del class="money"><dfn>¥</dfn>103.00</del></p>
+                                    <p class="money"><dfn>¥</dfn><span class="num">61.80</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>问答列表</h3>
+        <div class="desc"></div>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;ul class="list-question"&gt;
+    &lt;li&gt;
+        &lt;a href="/ask/1140.html" target="_blank"&gt;
+            电子保单是否可以用于办理申根国签证？申根国签证
+        &lt;/a&gt;
+        &lt;span class="ask-time"&gt;2012-05-04&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="/ask/1140.html" target="_blank"&gt;
+            电子保单是否可以用于办理申根国签证？申根国签证
+        &lt;/a&gt;
+        &lt;span class="ask-time"&gt;2012-05-04&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <ul class="list-question">
+                    <li>
+                        <a href="/ask/1140.html" target="_blank">
+                            电子保单是否可以用于办理申根国签证？申根国签证
+                        </a>
+                        <span class="ask-time">2012-05-04</span>
+                    </li>
+                    <li>
+                        <a href="/ask/1140.html" target="_blank">
+                            电子保单是否可以用于办理申根国签证？申根国签证
+                        </a>
+                        <span class="ask-time">2012-05-04</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="list-question"&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;
+            &lt;strong&gt;
+                旅程延误具体是怎么赔付的？
+                &lt;span class="color-gray6"&gt;（134***）&lt;/span&gt;
+            &lt;/strong&gt;
+            &lt;span class="time color-gray6"&gt;2013-07-03 12:14:26&lt;/span&gt;
+        &lt;/dt&gt;
+        &lt;dd&gt;
+            &lt;p&gt;
+            您好！..........&lt;/p&gt;
+        &lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt; </pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="list-question">
+                    <dl>
+                        <dt>
+                            <strong>
+                                旅程延误具体是怎么赔付的？
+                                <span class="color-gray6">（134***）</span>
+                            </strong>
+                            <span class="time color-gray6">2013-07-03 12:14:26</span>
+                        </dt>
+                        <dd>
+                            <p>
+                                您好！该款保险旅行延误的保险责任具体是指：被保险人在旅行期间因恶劣天气、自然灾害、机械故障、罢工、劫持或怠工，其他空运、航运工人的临时性抗议活 动、恐怖分子行为、航空管制而导致该被保险人原计划搭乘的公共交通工具延误，且延误连续达到一定时间，保险公司进行赔偿，每延误4小时赔偿300元，限额为600元。感谢您对新一站的关注！如有任何需要帮助，欢迎点击“咨询客服”或拨打客服热线400-667-5599。</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

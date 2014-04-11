@@ -1,0 +1,36 @@
+// Component
+// Level - safe level
+// 账户的安全等级
+// ------------------
+
+.level-security {
+    display:inline-block;
+    height:15px;
+    line-height:15px;
+    label {
+        display:inline-block;
+        background:url(/assets/img/level/securityLevel.png) no-repeat;
+        width:122px;
+        height:15px;
+        vertical-align:middle;
+        *margin-right:3px;
+    }
+    .level-primary {
+        background-position:0 0;
+    }
+    .level-intermediate {
+        background-position:0 -25px;
+    }
+    .level-common {
+        background-position:0 -51px;
+    }
+    .level-advanced {
+        background-position:0 -79px;
+    }
+    .level-desc {
+        .color-red;
+        display:inline-block;
+        font-weight:bold;
+        vertical-align:middle;
+    }
+}

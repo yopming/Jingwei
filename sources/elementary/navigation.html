@@ -1,0 +1,40 @@
+{% extends "sources/layout.html" %}
+
+{% block is_active_elementary %} active {% endblock %}
+
+{% block deputy %}
+<li class="{% block is_active_elementary_typo %}{% endblock %}">
+    <a href="/elementary_typo">排版</a>
+</li>
+<li class="{% block is_active_elementary_layout %}{% endblock %}">
+    <a href="/elementary_layout">结构</a>
+</li>
+<li class="{% block is_active_elementary_table %}{% endblock %}">
+    <a href="/elementary_table">表格</a>
+</li>
+<li class="{% block is_active_elementary_form %}{% endblock %}">
+    <a href="/elementary_form">表单</a>
+</li>
+<li class="{% block is_active_elementary_link %}{% endblock %}">
+    <a href="/elementary_link">链接</a>
+</li>
+<li class="{% block is_active_elementary_list %}{% endblock %}">
+    <a href="/elementary_list">列表</a>
+</li>
+<li class="{% block is_active_elementary_icon %}{% endblock %}">
+    <a href="/elementary_icon">小图标</a>
+</li>
+<li class="{% block is_active_elementary_button %}{% endblock %}">
+    <a href="/elementary_button">按钮</a>
+</li>
+<li class="{% block is_active_elementary_color %}{% endblock %}">
+    <a href="/elementary_color">颜色</a>
+</li>
+<li class="{% block is_active_elementary_html5 %}{% endblock %}">
+    <a href="/elementary_html5">html5元素</a>
+</li>
+{% endblock %}
+
+{% block real %}
+{% endblock %}
+

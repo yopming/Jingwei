@@ -1,0 +1,63 @@
+{% extends "sources/elementary/navigation.html" %}
+
+{% block title %} 基础－结构 {% endblock %}
+
+{% block is_active_elementary_layout %} active {% endblock %}
+
+{% block real %}
+<section id="doc-layout" class="section">
+    <div class="header">
+        <h2>结构<small>less/layout</small></h2>
+    </div>
+    <div class="content">
+        <h3>栅格</h3>
+        <div class="desc"><code>.fence</code>和<code>.yard</code>来定义栅格</div>
+        <div class="desc">具体的栅格定义在global.less文件中</div>
+        <div class="rule-code">
+            <div class="rule-code-title">HTML</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="fence"&gt;
+    &lt;div class="fence-thin"&gt;
+        &lt;div class="yard-860"&gt;860px wide&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="fence-wide"&gt;
+        &lt;div class="yard-200"&gt;200px&lt;/div&gt;
+        &lt;div class="yard-560"&gt;560px&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+
+        <h3>位移</h3>
+        <div class="desc">
+            某些页面要求元素的左边或者右边留出来一定空隙
+            <code>.pushLeft-240</code>
+        </div>
+        <div class="rule-code">
+            <div class="rule-code-title">HTML</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="fence"&gt;
+    &lt;div class="fence-wide"&gt;
+        &lt;div class="yard-200 pushLeft-240"&gt;
+            pushLef-240
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+
+        <h3>常用结构类</h3>
+        <div class="desc">
+            在某个元素只有下面class描述的单独一种样式的时候，使用下列class，如果还包含其他样式，就把结构相关样式添加到class当中。
+            <code>.ly-clear</code>空结构清除浮动（尽量不要使用）
+            <code>.ly-clearFix</code>伪类清除浮动
+            <code>.ly-left</code>
+            <code>.ly-right</code>
+            <code>.ly-hide</code>
+            <code>.ly-none</code>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,274 @@
+{% extends "sources/building/navigation.html" %}
+
+{% block title %} 建筑－盒子 {% endblock %}
+
+{% block is_active_building_box %} active {% endblock %}
+
+{% block real %}
+<section id="doc-box" class="section">
+    <div class="header">
+        <h2>容器盒子<small>less/box</small></h2>
+    </div>
+    <div class="content">
+        <h3>无标题的纯净盒子</h3>
+        <div class="desc"><code>.box-pure</code>是一个只有背景颜色和边框的盒子，没有padding或者margin这些，所以里面的元素需要进行自定义设置。仅仅适用于只需要一个边框和背景的元素。</div>
+
+        <h3>有标题的纯净盒子</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-heading"&gt;
+    &lt;div class="heading"&gt;web开发是危险的&lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;ul class="typo-orig"&gt;
+            &lt;li&gt;跨站脚本攻击&lt;/li&gt;
+            &lt;li&gt;填充数据库垃圾&lt;/li&gt;
+            &lt;li&gt;ddos攻击&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="box-headingPure">
+                    <div class="heading">web开发是危险的</div>
+                    <div class="content">
+                        <ul class="typo-orig">
+                            <li>跨站脚本攻击</li>
+                            <li>填充数据库垃圾</li>
+                            <li>ddos攻击</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>border-box</h3>
+        <div class="desc">
+            为元素设定的宽度和高度决定了元素的边框盒。 就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。 通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
+        </div>
+        <div class="rule-code">
+            <div class="rule-code-title">HTML</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-borderBox"&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+
+        <h3>带有标题</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-heading"&gt;
+    &lt;div class="heading"&gt;web开发是危险的&lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;ul class="typo-orig"&gt;
+            &lt;li&gt;跨站脚本攻击&lt;/li&gt;
+            &lt;li&gt;填充数据库垃圾&lt;/li&gt;
+            &lt;li&gt;ddos攻击&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="box-heading">
+                    <div class="heading">web开发是危险的</div>
+                    <div class="content">
+                        <ul class="typo-orig">
+                            <li>跨站脚本攻击</li>
+                            <li>填充数据库垃圾</li>
+                            <li>ddos攻击</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>瘦标题</h3>
+        <div class="desc">瘦标题的左右边距比正常的窄。</div>
+        <div class="rule-code">
+            <div class="rule-code-title">example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-heading box-headingSlim"&gt;
+    &lt;div class="heading"&gt;web开发是危险的&lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;ul class="typo-orig"&gt;
+            &lt;li&gt;跨站脚本攻击&lt;/li&gt;
+            &lt;li&gt;填充数据库垃圾&lt;/li&gt;
+            &lt;li&gt;ddos攻击&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="box-heading box-headingSlim">
+                    <div class="heading">web开发是危险的</div>
+                    <div class="content">
+                        <ul class="typo-orig">
+                            <li>跨站脚本攻击</li>
+                            <li>填充数据库垃圾</li>
+                            <li>ddos攻击</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>标题带有链接</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-heading"&gt;
+    &lt;div class="heading"&gt;&lt;a href="#"&gt;web开发&lt;/a&gt;是危险的&lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;ul class="typo-orig"&gt;
+            &lt;li&gt;跨站脚本攻击&lt;/li&gt;
+            &lt;li&gt;填充数据库垃圾&lt;/li&gt;
+            &lt;li&gt;ddos攻击&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="box-heading">
+                    <div class="heading"><a href="#">web开发</a>是危险的</div>
+                    <div class="content">
+                        <ul class="typo-orig">
+                            <li>跨站脚本攻击</li>
+                            <li>填充数据库垃圾</li>
+                            <li>ddos攻击</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>标题带有tab标签切换的盒子</h3>
+        <div class="rule-code">
+            <div class="rule-code-title">Example</div>
+            <div class="rule-code-content">
+                <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-headingSlim"&gt;
+    &lt;ul class="heading"&gt;
+        &lt;li class="now"&gt;最近浏览的产品&lt;/li&gt;
+        &lt;li&gt;最近搜索关键词&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="content" style="display:none"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+        content
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="rule-code-example">
+                <div class="box-headingSlim">
+                    <ul class="heading">
+                        <li class="now">最近浏览的产品</li>
+                        <li>最近搜索关键词</li>
+                    </ul>
+
+                    <div class="content" style="display:none">
+                    </div>
+
+                    <div class="content">
+                        content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>场景切换盒子</h3>
+    <div class="rule-code">
+        <div class="rule-code-title">Example</div>
+        <div class="rule-code-content">
+            <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-scene"&gt; 
+    &lt;div class="heading"&gt;
+        &lt;h3 class="h"&gt;
+            &lt;span class="classfication"&gt;未成年人&lt;/span&gt;保险
+        &lt;/h3&gt;
+        &lt;span class="narrative"&gt;0岁-17岁成长期，周全呵护。&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div classs="content"&gt;
+        content
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="rule-code-example">
+            <div class="box-scene">
+                <div class="heading">
+                    <div class="h">
+                        <span class="classfication">未成年人</span>保险
+                    </div>
+                    <span class="narrative">0岁-17岁成长期，周全呵护。</span>
+                </div>
+                <div classs="content">
+                    <ul class="list-square">
+                        <li><a class="blackBoardTitle" href="/notice/detail-133922.html" title="新一站火车险免费送" target="_blank">新一站火车险免费送</a></li>
+                        <li><a class="blackBoardTitle" href="/notice/detail-133957.html" title="有保险　畅快游" target="_blank">有保险　畅快游</a></li>
+                        <li><a class="blackBoardTitle" href="/notice/detail-133939.html" title="面对灾难　保在险前" target="_blank">面对灾难　保在险前</a></li>
+                        <li><a class="blackBoardTitle" href="/notice/detail-133956.html" title="暴雨季有备无患　巧用保险减损失" target="_blank">暴雨季有备无患　巧用保险减损失</a></li>
+                        <li><a class="blackBoardTitle" href="/notice/detail-133954.html" title="保险移动应用　让您随时随地选保险" target="_blank">保险移动应用　让您随时随地选保险</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>superb盒子</h3>
+    <div class="desc">应用于特殊地方的盒子。</div>
+    <div class="rule-code">
+        <div class="rule-code-title">Example</div>
+        <div class="rule-code-content">
+            <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-superb"&gt;
+    &lt;div class="heading"&gt;Little Knowledge&lt;/div&gt;
+    &lt;div class="content"&gt;
+        &lt;div class="inner"&gt;
+            &lt;div class="title"&gt;ssome fitle &lt;/div&gt;
+            &lt;p class="value"&gt;炎帝之少女 名曰女娃 女娃游于東海 溺而不返 故為精衛&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tail"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+        <div class="rule-code-example">
+            <div class="box-superb" style="width:220px;">
+                <div class="heading">Little Knowledge</div>
+                <div class="content">
+                    <div class="inner">
+                        <div class="title">ssome fitle </div>
+                        <p class="value">
+                            炎帝之少女 名曰女娃 女娃游于東海 溺而不返 故為精衛
+                        </p>
+                    </div>
+                </div>
+                <div class="tail"></div>
+            </div>
+        </div>
+    </div>
+
+    <h3>well</h3>
+    <div class="rule-code">
+        <div class="rule-code-title">Example</div>
+        <div class="rule-code-content">
+            <pre class="prettyprint linenums typo-orig">
+&lt;div class="box-well"&gt;
+    炎帝之少女 名曰女娃 女娃游于東海 溺而不返 故為精衛
+&lt;/div&gt;</pre>
+        </div>
+        <div class="rule-code-example">
+            <div class="box-well">
+                炎帝之少女 名曰女娃 女娃游于東海 溺而不返 故為精衛
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

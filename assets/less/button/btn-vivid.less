@@ -1,0 +1,27 @@
+//
+// Button - vivid
+// more red button
+// ---------------
+
+.btn-vivid {
+    height: @buttonVividHeight;
+    background-position: @buttonVividBackgroundPosition;
+    .btn-inner {
+        padding:0 @buttonVividPaddingHorizontal;
+        height: @buttonVividHeight;
+        line-height: @buttonVividLineHeight;
+        background-position: @buttonVividSpanBackgroundPosition;
+        font-size: @buttonNormalFontSize;
+        &,
+        &:hover {
+            color: @buttonVividColor;
+        }
+    }
+    &:hover {
+        background-position: @buttonVividHoverBackgroundPosition;
+        color: @buttonVividColor;
+        .btn-inner {
+            background-position: @buttonVividSpanHoverBackgroundPosition;
+        }
+    }
+}

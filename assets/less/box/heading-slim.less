@@ -1,0 +1,20 @@
+//
+// Box - with Heading and less padding
+// -----------------------------------
+
+.box-headingSlim {
+    border:1px solid @normalBorderColor;
+    margin-bottom:10px;
+    .heading {
+        background: @boxHeadingHeadingBackground;
+        font-size: @boxHeadingHeadingFontSize;
+        font-weight:bold;
+        line-height:1;
+        padding: @boxHeadingSlimHeadingPadding;
+        border-bottom:1px solid @lightBorderColor;
+    }
+    .content {
+        padding: @boxHeadingSlimContentPadding;
+        background: @boxHeadingContentBackground;
+    }
+}

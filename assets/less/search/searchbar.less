@@ -1,0 +1,81 @@
+// Need to be reformed!
+// @Description: Navmenu Style
+// @Author: zhangkaili 2012.07.19
+// @update: zhangkaili 2012.09.17
+.head-search { background-color:#f5f6f8; border-left:1px solid #eeeeee;position:relative; border-right:1px solid #eeeeee; border-bottom:1px solid #eeeeee; height:30px; padding:8px 20px 5px 10px; width:968px; margin:0 auto; z-index:333;zoom:1;}
+.ui-search { margin-top:3px; position:relative; width:380px;}
+// 下拉模拟效果
+.ui-search-sel {height:20px; margin:3px 5px 0 0; background-color:#fff;}
+.ui-search-sel span{width:48px; height:20px; border:1px solid #e0e0e0; display:block; background:url(/images/search/flow-down.png) 65px center no-repeat; padding:0 25px 0 10px; cursor:pointer; }
+.ui-search-sel ul{ position:absolute;border:1px solid #e0e0e0;margin-top: -1px}
+.ui-search-sel li{ padding-left:10px; background-color:#fff; height:22px; width:73px;}
+.ui-search-sel ul .on{background-color:#ffedcf; cursor:pointer;}
+.ui-search-input{ width:290px; margin-right:10px; padding:2px 0 3px 8px; line-height:15px; border:1px solid #e0e0e0; height:15px;}
+.ui-search-btn,.ui-search-btn:hover,.ui-search-btnon{ background:url(/images/search/ui-search-btn.png); width:60px; height:22px; background-repeat:no-repeat;}
+.ui-search-btn{ background-position:0 0;}
+.ui-search-btn:hover,.ui-search-btnon{ background-position:0 -22px;}
+.hot-search{ margin:3px 0 0 20px;}
+.hot-search dt{float:left; color:#999; margin-right:10px;  font-weight:normal;}
+.hot-search dd{float:left; margin-right:15px;}
+.hot-search dd a:link,.hot-search dd a:visited{color:#999;}
+.hot-search dd a:hover{color:#e54410}
+// 下拉列表 
+.search-drop-list{position:absolute; top:20px; left:0; border-left:1px solid #d8d8d8; border-right:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8; border-top:none; background-color:#fff;width:298px;}
+.mouse-down a,.search-drop-list a:hover{background-color:#ffedcf;color:#333}
+.search-drop-list ul{margin:0;paddding:0;}
+.search-drop-list a{display:block;padding:4px 10px;}
+.search-drop-list li em{color:#333;font-weight:700;}
+// 资讯搜索结果页
+.info-search-tit{font-weight:bold; font-family:\5FAE\8F6F\96C5\9ED1,\6587\6CC9\9A7F\6B63\9ED1\4F53,\534E\6587\7EC6\9ED1,Tahoma;}
+.info-search-list{ border-bottom:2px solid #ff783d; margin-top:5px;}
+.info-search-list .now,.info-search-list .off{background:url(/images/search/info-search-bg.png); background-repeat:repeat-x;  }
+.info-search-list .now{ background-position:0 0; border:1px solid #ff783d; color:#fff;}
+.info-search-list .off{background-position:0 -38px; border:1px solid #e5c484; color:#666;}
+.info-search-list .now,.info-search-list .off{height:28px; float:left; display:inline; padding:0 10px;  line-height:28px; text-align:center; margin-right:10px; font-weight:bold; cursor:pointer; font-size:14px;}
+.info-search-detail{ margin-top:10px; border-bottom:1px dashed #cdcac6; padding-bottom:10px;}
+.info-search-detail dt{background:url(/images/search/info-search-listbg.png) 13px 4px no-repeat; padding-left:38px; font-size:14px; font-weight:bold;}
+.info-search-detail dd{ padding:5px 0 0 38px; color:#666;}
+.pro{padding:7px 13px 13px;overflow:hidden;zoom:1;margin-bottom:10px}
+.pro .qt strong{font-size:14px}
+.pro .at{color:#666}
+// 搜索保险问答
+.search-pro{padding-top:7px;overflow:hidden;zoom:1;}
+.search-pro .qt strong{font-size:14px}
+.search-pro .at{color:#666}
+.at-none{ background:none;padding:8px 0 8px 20px;margin-bottom:5px;border-bottom:1px dashed #cdcac6;}
+.qt,.at{background-image:url(/images/icon-ask-ques.png); background-repeat:no-repeat;}
+.qt{background-position:-44px -1px;padding:8px 0 0px 38px}
+.at{background-position:-18px -31px;padding:8px 0 8px 38px;margin-bottom:5px;border-bottom:1px dashed #cdcac6}
+
+// 搜索资讯页话题使用
+.search-topic .topic-info .topic{ width:100%}
+.search-topic .topic-info dt a{font-weight:500}
+// 搜索分页
+.pagerNum a:hover, .pagerNum .on {background-color: #FF793F;border: 1px solid #E1600A;color: #FFFFFF !important;}
+.search-page{ margin-top:20px;}
+// 资讯搜索结果页end
+
+// 搜索无结果页
+.search-noresult{background:url(/images/search/info-search-nobg.jpg) -30px 0 no-repeat; height:306px; width:770px; overflow:hidden;}
+.search-noresult-detail{padding:25px 0 0 270px;}
+.search-noresult-detail h3{ font-size:22px; font-weight:bold; font-family:\5FAE\8F6F\96C5\9ED1,\6587\6CC9\9A7F\6B63\9ED1\4F53,\534E\6587\7EC6\9ED1,Tahoma;}
+.search-noresult-detail h3 span{ color:#e4630d; padding:0 4px;}
+.suggestion{ padding-top:30px;}
+.suggestion dt{ font-weight:bold; font-size:14px; padding-bottom:10px;}
+.suggestion dd{ text-indent:32px; line-height:22px;}
+.suggest-prod{background:url(/images/search/info-nosearch-bot.png) left bottom no-repeat; margin-top:5px; padding-bottom:25px; height:62px;  width:463px; padding-left:300px;}
+.suggest-prod li{ float:left;  margin-right:25px;white-space: nowrap;}
+// 推荐产品 
+#recPro {width:768px;overflow:hidden;zoom:1}
+#recPro h2{line-height:30px;padding-left:10px;font-size:14px; border-bottom:1px dashed #ccc; padding-bottom:10px; margin-bottom:20px;}
+#recPro table{margin:0 auto; overflow:hidden}
+#recPro .perRec td{padding:0 35px;vertical-align:top; border-right:1px dashed #ccc}
+#recPro .list{position:relative;width:230px;height:auto;margin-bottom:10px;border-bottom:none;padding:0}
+#recPro .list a{background:url(/images/btn_pro_apply.gif) no-repeat;display:block;width:96px;height:27px;}
+#recPro .list .priceOld{color:#777;padding:0}
+#recPro .list .priceNew{padding:0}
+.perRec{width:100%;border-collapse:separate;border-spacing:2px}
+.item{padding:5px 5px 10px;float:left;width:245px}
+.itempic img{float:left;height:80px;margin-right:10px;margin-top:5px;width:80px}
+.askInfo{float:left;width:155px}
+// 搜索无结果页end

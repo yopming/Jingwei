@@ -1,0 +1,26 @@
+//
+// Nav - breadcrumb
+// ----------------
+
+.nav-bread {
+    margin: 0 5px 5px;
+    padding: 5px 10px;
+    color: #666;
+    a {
+        color: @linkNormalColor;
+        &:hover {
+            color: @linkNormalHoverColor;
+        }
+    }
+    .orign {
+        color: @linkGreenColor;
+        &:hover,
+        &:active {
+            color: @linkGreenHoverColor;
+        }
+    }
+    span {
+        margin: 0 3px;
+        font-family: @breadArrowFontFamily;
+    }
+}

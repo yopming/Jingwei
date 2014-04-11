@@ -1,0 +1,45 @@
+//
+// Share - common
+// --------------
+
+.share {
+    .sina {background-position:0 0;}
+    .email {background-position:0 -18px;}
+    .tengxunweibo {background-position:0 -36px;}
+    .taobao {background-position:0 -54px;}
+    .qqzone {background-position:0 -72px;}
+    .renren {background-position:0 -90px;}
+    .baiducang {background-position:0 -108px;}
+    .douban {background-position:0 -126px;}
+    .kaixin {background-position:0 -144px;}
+    .wangyi {background-position:0 -162px;}
+
+    .shareSNS {
+        .clearfix();
+        overflow:hidden;
+        *vertical-align:middle;
+        a,
+        .shareAll {
+            .inline-block-ie67();
+            .square(18px);
+            .indent-text();
+            *float:left;
+        }
+        a {
+            background-image: url(/assets/img/share/share.png);
+            background-repeat: no-repeat;
+        }
+
+        .shareAll {
+            .inline-block-ie67();
+            background-position:-1px -180px;
+            &:hover {
+                text-decoration:none;
+            }
+        }
+    }
+
+    input {
+        _display:none;
+    }
+}

@@ -1,0 +1,564 @@
+//
+// XYZ - common - navbar
+// ---------------------
+
+@import "../evaluate/star";
+
+#xyz-nav {
+    .clearfix();
+    background: @colorEF4218 url(/assets/img/total/bg-xyz-nav.png) repeat-y;
+    height: @xyzNavHeight;
+    font-family: @sansFontFamily;
+
+    // 首页之外的导航都有10px下边距
+    &.eloquent {
+        margin-bottom:10px;
+    }
+
+    .icon {
+        // .inline-block-ie67();
+        display:block;
+        .square(22px);
+        background:url(/assets/img/total/total.png) no-repeat;
+    }
+    .icon-house {
+        background-position:0 -198px;
+    }
+    .icon-enterprise {
+        background-position:-22px -198px;
+    }
+
+    .icon-ins-travel {
+        background-position:0 -220px;
+    }
+    .icon-ins-accident {
+        background-position:-22px -220px;
+    }
+    .icon-ins-health {
+        background-position:-44px -220px;
+    }
+    .icon-ins-treasure {
+        background-position:-66px -220px;
+    }
+    .icon-ins-car {
+        background-position:-88px -220px;
+    }
+    .icon-ins-investment {
+        background-position:-110px -220px;
+    }
+    .icon-ins-cargo {
+        background-position:0 -264px;
+    }
+    .icon-ins-liability {
+        background-position:-22px -264px;
+    }
+    .icon-ins-group {
+        background-position:-44px -264px;
+    }
+    .icon-ins-auto {
+        background-position:-66px -264px;
+    }
+    .hover {
+        .icon-ins-travel {
+            background-position:0 -242px;
+        }
+        .icon-ins-accident {
+            background-position:-22px -242px;
+        }
+        .icon-ins-health {
+            background-position:-44px -242px;
+        }
+        .icon-ins-treasure {
+            background-position:-66px -242px;
+        }
+        .icon-ins-car {
+            background-position:-88px -242px;
+        }
+        .icon-ins-investment {
+            background-position:-110px -242px;
+        }
+        .icon-ins-cargo {
+            background-position:0 -286px;
+        }
+        .icon-ins-liability {
+            background-position:-22px -286px;
+        }
+        .icon-ins-group {
+            background-position:-44px -286px;
+        }
+        .icon-ins-auto {
+            background-position:-66px -286px;
+        }
+    }
+
+    .icon-advantages {
+        .square(13px);
+        background-position:-159px -139px;
+        overflow:hidden;
+    }
+
+    .category,
+    .menus {
+        float:left;
+    }
+    .category {
+        // 下面对a的hover的定义是因为页面之前的global的样式的链接在hover下没有下划线
+        a:hover {
+            text-decoration:underline;
+        }
+        width: @xyzNavCategoryWidth;
+        position:relative;
+        z-index: @xyzNavCategoryZindex;
+        .linkAll {
+            display:block;
+            cursor:default;
+            height: @xyzNavHeight;
+            line-height: @xyzNavHeight;
+            padding-left:14px;
+            font-size:18px;
+            color: @colorFFFFFF;
+            font-family: @sansFontFamily;
+            background: @xyzNavLinkAllBackground;
+            &:hover {
+                text-decoration:none;
+            }
+        }
+        .notHome {
+            cursor:pointer;
+        }
+        .designate {
+            .arrow-size(14px, 14px);
+            .arrow-direction(bottom, @colorFFD8CF, @xyzNavLinkAllBackground);
+            position:absolute;
+            right:17px;
+            top:17px;
+            .desigFix {
+                .inline-block-ie67();
+                .size(8px, 4px);
+                position:absolute;
+                overflow:hidden;
+                top:-7px;
+                left:-4px;
+            }
+            .inner {
+                .arrow-size(8px, 8px);
+                .arrow-direction(bottom, @xyzNavLinkAllBackground);
+                position:absolute;
+                top:0;
+            }
+        }
+        // 弹出之后, 变身！
+        .transform {
+            .opacity(80);
+            .designate {
+                .arrow-direction(top, @colorFFD8CF, @xyzNavLinkAllBackground);
+                top:10px;
+            }
+            .desigFix {
+                top:3px;
+            }
+            .inner {
+                .arrow-direction(top, @xyzNavLinkAllBackground);
+                top:-4px;
+            }
+        }
+
+        .flyout {
+            position:absolute;
+            top: @xyzNavHeight;
+            left:0;
+            height:535px;
+            width:100%;
+        }
+        .litb,
+        .extendOut {
+            position:absolute;
+            top:0;
+        }
+
+        .litb {
+            top:0;
+            left:0;
+            border:2px solid @colorF75730;
+            border-top:0 none;
+            background: @xyzNavLitbBackground;
+            z-index: @xyzNavlitbZindex;
+            *width: @xyzNavCategoryWidth - 4;
+        }
+        .litbTitle {
+            background: @colorFDEFDB;
+            padding:8px 10px;
+            height:22px;
+            line-height:22px;
+            font-family: @sansFontFamily;
+            color: @color666666;
+            font-size:15px;
+            .icon {
+                float:left;
+                margin-right:10px;
+            }
+        }
+        .litbOpen {
+            padding:0 2px;
+            li {
+                .clearfix();
+                position:relative;
+                padding:5px 8px;
+                line-height:22px;
+                font-size:14px;
+                border-bottom:1px solid @colorFFFCF8;
+                border-top:1px solid @colorFCE7CA;
+                min-height:22px;
+                *float:left;
+                *display:inline;
+                *zoom:1;
+                _height:22px;
+                _padding:5px 6px;
+                &.tinco {
+                    border-top:1px solid @colorFFF8EF;
+                }
+                &.vilya {
+                    border-bottom:1px solid @colorFFF8EF;
+                }
+            }
+            .signify,
+            .insure {
+                float:left;
+            }
+            .signify {
+                .square(22px);
+                margin-right:10px;
+            }
+            .insure {
+                width:174px;
+                position:relative;
+                .icon-going {
+                    position:absolute;
+                    top:6px;
+                    right:0;
+                    .arrow-size(12px, 10px);
+                    .arrow-direction(right, @colorF9C4AB, @xyzNavLitbBackground);
+                    .inline-block-ie67();
+                    .inner {
+                        .arrow-size(6px, 6px);
+                        .arrow-direction(right, @xyzNavLitbBackground);
+                        position:absolute;
+                        left:-5px;
+                        top:-3px;
+                    }
+                }
+
+            }
+            .insure {
+                .insureMain {
+                    font-weight:bold;
+                    font-size:15px;
+                    color: @linkGray5Color;
+                    &:hover {
+                        color: @linkGray5HoverColor;
+                    }
+                }
+            }
+            .extra {
+                line-height:1.3;
+                a {
+                    font-size:12px;
+                    font-weight:normal;
+                    margin-right:10px;
+                    color: @linkGray6Color;
+                    &:hover {
+                        color: @linkGray6HoverColor;
+                    }
+                }
+            }
+            .extend {
+                display:none;
+            }
+
+            li:hover {
+                background:#fff;
+                margin:0px -2px -1px -2px;
+                padding:5px 8px 6px 10px;
+                border-top:1px solid @colorFCE7CA;
+                border-bottom:1px solid @colorFCE7CA;
+                *padding-right:10px;
+                position:relative;
+                zoom:1;
+            }
+            li.hover {
+                background:#fff;
+                padding-left:10px;
+                padding-right:0px;
+                padding-bottom:6px;
+                margin-left:-2px;
+                margin-right:-5px;
+                margin-bottom:-1px;
+                border-top:1px solid @colorF6C6AF;
+                border-bottom:1px solid @colorF6C6AF;
+                z-index: @xyzNavlitbHover;
+                *padding-right:13px;
+                *position:relative;
+                *zoom:1;
+                _padding-left:8px;
+                _padding-right:11px;
+                .main {
+                    color: @colorEA4607;
+                }
+                .icon-going {
+                    display:none;
+                }
+            }
+        }
+
+        .direct {
+            .size(226px, 80px);
+            border-top: 1px solid @colorFCE7CA;
+        }
+
+        .extendOut {
+            display:none;
+            height:100%;
+            z-index: @xyzNavExtendOutZindex;
+            background:#fff;
+            border:1px solid @colorF6C6AF;
+            left:230px;
+        }
+        .extendPanel {
+            .clearfix();
+            width:680px;
+            height:100%;
+            display:none;
+            &.deformity {
+                width:440px;
+                overflow:hidden;
+            }
+
+            .sort,
+            .bargain {
+                float:left;
+                height:100%;
+            }
+            .sort {
+                width:400px;
+                padding:0 20px;
+                color: @color666666;
+                background: @colorFFFFFF;
+            }
+            .bargain {
+                width:200px;
+                padding:0 20px;
+                background: @colorF8F8F8;
+            }
+            .subdivide {
+                padding:15px 0;
+                a {
+                    color: @linkGray6Color;
+                    &:hover {
+                        color: @linkGray6HoverColor;
+                    }
+                }
+                .link-green {
+                    color: @linkGreenColor;
+                    &:hover {
+                        color: @linkGreenHoverColor;
+                    }
+                }
+            }
+            dt {
+                font-weight:bold;
+                font-size:14px;
+                padding:10px 0;
+            }
+            dd {
+                .clearfix();
+                padding-bottom:20px;
+                border-bottom:1px dotted @colorD3D3D3;
+                margin-bottom:20px;
+                a {
+                    display:block;
+                    float:left;
+                    width:75px;
+                    padding:3px 0;
+                }
+            }
+            .clean {
+                border-bottom:0 none;
+            }
+            .plate {
+                a {
+                    .inline-block-ie67();
+                    .size(100px, 36px);
+                    margin-right:5px;
+                }
+            }
+            .sug {
+                padding-top:10px;
+                font-size:16px;
+                color: @color666666;
+                font-weight:bold;
+            }
+            .sugName {
+                .text-overflow();
+                width:200px;
+                font-size:14px;
+                padding:5px 0;
+            }
+            .sugPic img {
+                display:block;
+                .square(200px);
+            }
+            .sugSpec {
+                .clearfix();
+                background: @colorFFFFFF;
+                height:36px;
+                .sugCom,
+                .price {
+                    float:left;
+                    .size(100px, 36px);
+                }
+                .sugCom img {
+                    display:block;
+                }
+                .price {
+                    width:95px;
+                    padding-right:5px;
+                }
+                .priceAlign {
+                    height:36px;
+                    float:right;
+                    td {
+                        vertical-align:middle;
+                    }
+                }
+                .money {
+                    display:block;
+                    text-align:right;
+                    // 下面一行为了覆盖 member_center.css:176的.money的样式，member_center.css修改之后方可去除
+                    padding-right:0 !important;
+                }
+            }
+            .sugCause {
+                color: @color999999;
+                margin: 15px 0 10px;
+                width:200px;
+                height:32px;
+                line-height:16px;
+                overflow:hidden;
+            }
+            .sugCount,
+            .eval-star {
+                color: @color666666;
+            }
+            .sugDirect {
+                margin-top:20px;
+                text-align:right;
+            }
+
+            .bewrite {
+                color: @color999999;
+            }
+            .bewriteInDetail {
+                display:inline;
+                float:none;
+                padding:0;
+            }
+            .aspect {
+                display:block;
+                text-align:right;
+                color: @linkGreenColor;
+                &:hover {
+                    color: @linkGreenHoverColor;
+                }
+            }
+            .advantages {
+                margin-top:10px;
+                li {
+                    padding:7px 0;
+                    font-size:14px;
+                    height:14px;
+                    line-height:14px;
+                }
+                .icon-advantages {
+                    .inline-block-ie67();
+                    float:left;
+                    margin-right:10px;
+                    *float:none;
+                }
+            }
+            .advIllu {
+                margin-top:40px;
+                text-align:center;
+            }
+        }
+
+        // 车险
+        .auto .bargain {
+            width:210px;
+            padding:0 15px;
+        }
+    }
+
+    .menus {
+        width:770px;
+        position:relative;
+    }
+    .menu {
+        .clearfix();
+        li {
+            float:left;
+        }
+        a {
+            .inline-block-ie67();
+            height:40px;
+            line-height:40px;
+            font-size:16px;
+            color: @colorFFFFFF;
+            padding:0 20px;
+            &:hover {
+                background: @colorE02E00;
+                text-decoration:none;
+            }
+        }
+        .current a {
+            padding:0 19px;
+            height:38px;
+            border:1px solid @colorCB2902;
+            background: @colorD62A00;
+            cursor:default;
+            _line-height:38px;
+        }
+    }
+    .advantage {
+        .clearfix();
+        display:block;
+        position:absolute;
+        right:0;
+        top:10px;
+        li {
+            float:left;
+            height:20px;
+            line-height:20px;
+            margin-left:8px;
+            color: @colorFBBDB0;
+        }
+        .icon-certi,
+        .icon-lighting,
+        .icon-assistant {
+            .inline-block-ie67();
+            .square(20px);
+            background-image:url(/assets/img/total/total.png);
+            background-repeat:no-repeat;
+            float:left;
+            margin-right:5px;
+        }
+        .icon-certi {
+            background-position:-196px -156px;
+        }
+        .icon-lighting {
+            background-position:-175px -156px;
+        }
+        .icon-assistant {
+            background-position:-154px -156px;
+        }
+    }
+}
