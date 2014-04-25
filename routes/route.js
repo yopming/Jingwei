@@ -1,7 +1,7 @@
-exports.index = function(req, res){
-  res.render('index');
-};
+exports = module.exports = function(app) {
+  app.get('/', function(req, res) {
+    res.render('index');
+  });
 
-exports.admin = function(req, res){
-  res.render('admin');
+  return app;
 };

@@ -7,8 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var lessMiddleware = require('less-middleware');
-
-var routes = require('./routes/route');
+var flash = require('connect-flash');
 
 var app = express();
 
@@ -22,6 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
+app.use(flash());
 
 // less-middleware
 app.use(lessMiddleware({
@@ -39,8 +39,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/admin', routes.admin);
+// routes
+app = (require("./routes/route"))(app);
+app = (require("./routes/admin"))(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

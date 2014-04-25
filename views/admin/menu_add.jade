@@ -1,0 +1,15 @@
+extends ../admin
+
+block path
+  - nav['menuNew'] = 'active'
+
+block content
+  h2.pagetitle Add New Menu
+  form(action="/admin/menu/new", method="POST")
+    div.form-group
+      input.form-control(type="text", placeholder="New menu name", name="name")
+      p.help-block Word Count: 0
+    button.btn.btn-primary(type="submit") Sumit
+
+
+block auxiliary
