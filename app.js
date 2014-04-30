@@ -7,7 +7,6 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var lessMiddleware = require('less-middleware');
-var flash = require('connect-flash');
 
 var app = express();
 
@@ -21,7 +20,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(flash());
 
 // less-middleware
 app.use(lessMiddleware({
