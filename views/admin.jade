@@ -24,8 +24,10 @@ html
                 li.dropdown-header
                   span.fui-list
                   span  Menu
-                li(class="#{nav.menuNew}")
-                  a(href="/admin/menu/new") Add New
+                li(class="#{nav.menuFolderNew}")
+                  a(href="/admin/menu/newfolder") Add Folder
+                li(class="#{nav.menuPageNew}")
+                  a(href="/admin/menu/newpage") Add Page
                 li(class="#{nav.menuAll}")
                   a(href="/admin/menu/all") All Menus
 
@@ -37,13 +39,6 @@ html
                   a(href="") Add New
                 li
                   a(href="") Belongings
-
-                li.divider
-                li.dropdown-header
-                  span.fui-checkbox-unchecked
-                  span  Pages
-                li
-                  a(href="") Add New
 
                 li.divider
                 li

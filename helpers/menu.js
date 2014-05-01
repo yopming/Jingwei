@@ -42,7 +42,6 @@ exports.menuLs = menuLs;
 
 /*
  * Mkdir under the specific directory
- * @param directory name
  * @param new directory name
  */
 function menuMkdir(name, callback) {
@@ -59,6 +58,23 @@ function menuMkdir(name, callback) {
   });
 }
 exports.menuMkdir = menuMkdir;
+
+
+/*
+ * Touch new file
+ * @param file name
+ */
+function menuTouch(name, callback) {
+  var _path = common.buildPath(name) + '.md';
+  fs.writeFile(_path, '', function(err) {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null);
+    }
+  });
+}
+exports.menuTouch = menuTouch;
 
 
 /*

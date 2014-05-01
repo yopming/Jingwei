@@ -1,0 +1,18 @@
+extends ../admin
+
+block path
+  - nav['menuFolderNew'] = 'active'
+
+block content
+  h2.pagetitle Add New Folder
+  form(action="/admin/menu/newfolder", method="POST")
+    div.form-group
+      input.form-control.dev-menu-count(type="text", placeholder="New menu name", name="name")
+      p.help-block Word Count: 
+        span.dev-menu-counter 0
+    button.btn.btn-primary(type="submit") Sumit
+
+block appendscript
+  script(src="/js/jingwei/admin/menu.add.js")
+
+block auxiliary

@@ -1,18 +1,16 @@
 extends ../admin
 
 block path
-  - nav['menuNew'] = 'active'
+  - nav['menuPageNew'] = 'active'
 
 block content
-  h2.pagetitle Add New Menu
-  form(action="/admin/menu/new", method="POST")
+  h2.pagetitle Add New Page
+  form(action="/admin/menu/newpage", method="POST")
     div.form-group
       input.form-control.dev-menu-count(type="text", placeholder="New menu name", name="name")
-      p.help-block Word Count: 
+      p.help-block Woud Count:
         span.dev-menu-counter 0
-    button.btn.btn-primary(type="submit") Sumit
+    button.btn.btn-primary(type="submit") Submit
 
 block appendscript
   script(src="/js/jingwei/admin/menu.add.js")
-
-block auxiliary

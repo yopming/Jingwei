@@ -12,21 +12,45 @@ exports = module.exports = function(app) {
 
   /*
    * Menu
-   * Add
+   * Add folder
    * @method get
    */
-  app.get('/admin/menu/new', function(req, res) {
-    res.render('admin/menu_add');
+  app.get('/admin/menu/newfolder', function(req, res) {
+    res.render('admin/menu_folder_add');
   });
 
   /*
    * Menu
-   * Add
+   * Add folder
    * @method post
    */
-  app.post('/admin/menu/new', function(req, res) {
+  app.post('/admin/menu/newfolder', function(req, res) {
     var newMenuName = req.body.name;
     menu.menuMkdir(newMenuName, function(err) {
+      if (err) {
+        res.locals.error = err;
+      }
+      res.redirect('/admin/menu/all');
+    });
+  });
+
+  /*
+   * Menu
+   * Add page
+   * @method get
+   */
+  app.get('/admin/menu/newpage', function(req, res) {
+    res.render('admin/menu_page_add');
+  });
+
+  /*
+   * Menu
+   * Add page
+   * @method post
+   */
+  app.post('/admin/menu/newpage', function(req, res) {
+    var newMenuName = req.body.name;
+    menu.menuTouch(newMenuName, function(err) {
       if (err) {
         res.locals.error = err;
       }

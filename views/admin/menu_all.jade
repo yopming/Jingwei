@@ -6,7 +6,6 @@ block path
 block content
   h2.pagetitle 
     span All Menus
-    a.btn.btn-default.btn-xs.pagetitleAction(href="/admin/menu/new", title="Add New Menu") Add New
 
   table.table.table-bordered.menutable
     thead
@@ -24,7 +23,7 @@ block content
             if menu[1] == 'md'
               | Page
             else
-              | Menu
+              | Folder
           td
             div.btn-group.btn-group-xs
               a.btn.btn-default(href="/admin/menu/edit/#{menu[0]}/#{menu[1]}") Edit
