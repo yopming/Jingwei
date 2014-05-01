@@ -7,16 +7,9 @@ block content
         div.navbar-inner
           div.container
             ul.nav.navbar-nav
-              li.active
-                a(href="#") Overview
-              li
-                a(href="#") Skeleton
-              li
-                a(href="#") Elementary
-              li
-                a(href="#") Building
-              li
-                a(href="#") Dictionary
+              each menu in menus
+                li
+                  a(href="##{menu[0]}")= menu[0]
 
   div.row.body
     div.col-md-3.navi

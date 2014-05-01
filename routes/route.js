@@ -1,6 +1,17 @@
 exports = module.exports = function(app) {
+
+  var menu = require('../helpers/menu.js');
+
+  /*
+   * Jingwei
+   * @method get
+   */
   app.get('/', function(req, res) {
-    res.render('index');
+    menu.menuLs(function(results) {
+      res.render('index', {
+        menus: results
+      });
+    });
   });
 
   return app;
