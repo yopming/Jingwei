@@ -7,7 +7,12 @@ block content
   h2.pagetitle 
     span All Menus
 
-  table.table.table-bordered.menutable
+  table.table.table-bordered.table-condensed.menutable
+    colgroup
+      col
+      col
+      col
+      col(style="width:220px;")
     thead
       tr
         th #
@@ -26,8 +31,11 @@ block content
               | Folder
           td
             div.btn-group.btn-group-xs
-              a.btn.btn-default(href="/admin/menu/edit/#{menu[0]}/#{menu[1]}") Edit
+              a.btn.btn-default(href="/admin/menu/edit/#{menu[0]}/#{menu[1]}") Rename
               a.btn.btn-danger(href="/admin/menu/remove/#{menu[0]}/#{menu[1]}") Remove
+            if menu[1] == 'md'
+              div.btn-group.btn-group-xs
+                a.btn.btn-info(href="/admin/article/edit/#{menu[0]}") Modify
 
 block auxiliary
 
