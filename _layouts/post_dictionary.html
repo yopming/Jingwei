@@ -1,0 +1,26 @@
+---
+layout: default
+title: Dictionary
+tabenabled: dictionary
+---
+
+<div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    {% for post in site.categories.skeleton %}
+
+      {% assign current = nil %}
+      {% if page.url == post.url %}
+        {% assign current = 'current' %}
+      {% endif %}
+
+      <li class="{{ current }}">
+        <a href="{{ post.url }}">{{ post.name }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  {% include post_markdown.html %}
+</div>
+

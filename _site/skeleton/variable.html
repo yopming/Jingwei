@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jingwei - Skeleton|变量（Variable）</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/docs.css">
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+</head>
+<body id="jingwei">
+  <div id="header">
+    <div class="container">
+      <h1>Jingwei Styleguide</h1>
+    </div>
+  </div>
+
+  <div id="menu">
+    <div class="container">
+      <ul class="tabs">
+        <li >
+          <a href="/">Overall</a>
+        </li>
+        <li  class="active" >
+          <a href="/skeleton">Skeleton</a>
+        </li>
+        <li >
+          <a href="/elementary">Elementary</a>
+        </li>
+        <li >
+          <a href="/building">Building</a>
+        </li>
+        <li >
+          <a href="/dictionary">Dictionary</a>
+        </li>
+        <li >
+          <a href="/guide">Guide</a>
+        </li>
+        <li >
+          <a href="/whatsnew">What's New</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/skeleton/variable.html">变量（Variable）</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/skeleton/structure.html">组织结构</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/skeleton/mixin.html">混入（Mixin）</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/skeleton/index.html">全局</a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="rodoc">
+  <!-- Skeleton< -->
+  <!-- skeleton -->
+  <!-- 11 Jul 2014 -->
+  <div class="post markdown">
+    <h1>Variable</h1>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">less/_variable.less
+</code></pre></div>
+<p><em>变量的意义</em>：再其他的文件中调用变量可以保证值的统一，可以有效控制全局中某样式的数量，保证规范的执行，方便后期统一修改。<br>
+<em>变量不可混用</em>：目前，可能存在多个变量的值是相同的，是根据业务要求来定义的，<strong>值相同不代表可以混用</strong>，混用会造成非预期的恶劣影响。<br>
+<em>变量名称定义</em>：变量名称的定义一定要清晰易懂，名称可以长一些，最终也不会反映到css文件中，不会增加页面负载，有格式要求的变量如果某部分不存在，可以省略；  </p>
+
+<h2>global</h2>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@baseColor          文档文本颜色
+@baseBackground     文档背景颜色
+@baseFontSize       文档字体大小
+@baseLineHeight     文档文字行高
+@minorBackground    注册等页面为灰色的body背景
+</code></pre></div>
+<h2>color</h2>
+
+<blockquote>
+<p>此项下的条目已不再适用，仅做了解即可</p>
+</blockquote>
+
+<p>为了统一页面中文字的颜色，在定义文字颜色的时候不直接定义色值，把色值定义在变量中，然后引用变量。当然链接的颜色不包括在内，链接有自己的颜色设定。</p>
+
+<p>在定义颜色变量的时候，变量名称使用color加上颜色色值的大写全6位命名，如果是RGB活着RGBA形式的颜色，把RGBA分别的值用中划线分割。</p>
+
+<h2>font</h2>
+
+<p>定义某一类字体的时候一定要考虑到跨平台兼容性问题，比如标题的字体设定为“微软雅黑”，那么要考虑到没有微软雅黑的机器上的替代字体，设置字体的时候尽量使用变量。</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@baseFontFamily         文档字体
+@sansFontFamily         无衬线字体
+@serifFontFamily        衬线字体
+@monospaceFontFamily    等宽字体
+@moneyFontFamily        表示人民币符号的字体
+@westernFontFamily      西文字体
+</code></pre></div>
+<h2>hr</h2>
+
+<p>分割线</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@hrBorderSize   分割线尺寸
+@hrBorderStyle  分割线的类型(参考border的style)
+@hrColor        分割线的颜色
+@hrMargin       分割线的上下边距
+@hrHeight       不使用边框来定义的分割线的高度
+</code></pre></div>
+<h2>link</h2>
+
+<p>链接
+链接的变量名称格式： @link + 类型 + 状态 + 属性
+比如<code>@linkGray6HoverColor</code></p>
+
+<h2>form</h2>
+
+<p>表单</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@formColor                  表单文字颜色
+@formBackground             表单控件背景
+@formBorderColor            表单控件边框颜色
+@formFocusBorderColor       表单控件在focus状态下边框颜色
+@formInputWidth             输入框的默认宽度
+@formInputHeight            输入框的默认高度
+@formLineHeight             书框框的默认行高
+@formPadding                输入框、textarea的默认padding
+@formPaddingVertical        垂直padding
+@inputErrorBorderColor      输入框错误状态下边框颜色
+@inputWarningBorderColor    警告状态
+@inputDisableBorderColor    不可用状态
+@inputDisableBackground     不可用状态的输入框背景
+@inputDisableColor          不可用状态的文字颜色
+@tipError{Warning}Color     表单的错误提示/警告提示的颜色
+@tipLinkColor               提示信息中链接的颜色
+</code></pre></div>
+<h2>button</h2>
+
+<p>按钮
+按钮变量名称格式： @button + 类型 + 状态 + 属性
+比如<code>@buttonJadeLargeBackgroundPosition</code>, <code>@buttonVividTinyHoverBackgroundPosition</code></p>
+
+<h2>border</h2>
+
+<p>变量</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@normalBorderColor      边框默认颜色
+@lightBorderColor       BOX-HEADING的标题的下边框颜色，较为浅的颜色
+</code></pre></div>
+<h2>status</h2>
+
+<p>错误状态</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@statusSucBorderColor       成功状态的边框颜色
+@statusSucBackground        成功状态的背景
+@statusFailBorderColor      错误报错边框颜色
+@statusFailBackground       错误报错背景
+</code></pre></div>
+<h2>alert</h2>
+
+<p>警告信息
+警告信息变量名称格式： @alert + 类型 + 属性
+比如<code>@alertInfoBackground</code>, <code>@alertMessageBorder</code></p>
+
+<h2>bubble</h2>
+
+<p>气泡提示</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@bubbleContentColor     气泡文字颜色
+</code></pre></div>
+<h2>breadcrumb</h2>
+
+<p>面包屑</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@breadLinkHoverDecoration   链接hover效果
+@breadArrowFontFamily       面包屑的&gt;的字体
+</code></pre></div>
+<h2>box</h2>
+
+<p>容器
+容器变量名称格式： @box + 类型 ＋ 容器部件 + 属性
+比如<code>@boxBasicHeadingPadding</code>, <code>@boxSuperValueColor</code></p>
+
+<h2>money</h2>
+
+<p>金钱，人民币</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@moneyColor             “起”的颜色
+@moneySecondaryColor    金钱的符号的颜色
+@moneyDelColor          原价的颜色，包括符号和数字
+@moneyMarkColor         金钱符号的颜色
+@moneyFontSize          金钱符号和数字的字体大小
+@moneyUpFontSize        “起”的字体大小
+@moneyDelFontSize       原价的字体大小
+</code></pre></div>
+<h2>tag</h2>
+
+<p>tag标签</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@tagsCalHeight: tag标签的高度
+@tagsCalChosePanelOffsetTop: tag标签的弹出的位置offset
+</code></pre></div>
+<h2>z-index</h2>
+
+<p>整站所有的z-index都需要使用变量，从统一的高度来审查，防止出现莫名奇妙的遮盖现象。</p>
+
+<p>z-index的取值范围：<br>
+<em>页面内部</em>：1-999<br>
+<em>公共组件</em>：1000-9999<br>
+<em>弹出部分</em>：&gt;9999  </p>
+
+<h2>carousel</h2>
+
+<p>首页轮播</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@carouselIndicatorBackground        轮播指示的背景色
+@carouselIndicatorActiveBackground  轮播指示器的当前激活状态的背景色
+</code></pre></div>
+<h2>xyz-[header | top | nav | footer]</h2>
+
+<p>分别为头部、顶部、导航、页脚的涉及到的公共变量</p>
+
+<h2>sharebox</h2>
+
+<p>分享组件</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@shareboxBackground             分享弹出box的背景色
+@shareboxInnerBackground        分享弹出的内部的背景色
+@shareboxInnerHeadBackground    分享弹出的内部的头部的背景色
+</code></pre></div>
+<h2>media query</h2>
+
+<p>定义统一的Media Query查询条件</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">@iPadDetectQuery: ~&quot;-webkit-min-device-pixel-ratio: 1.25&quot;;  查询iPad，供显示retina的logo所用 
+</code></pre></div>
+  </div>
+</div>
+
+</div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <div class="contact-left">
+        <p>
+          <a href="mailto:gengtieming@made-in-china.com">gengtieming</a>
+        </p>
+      </div>
+      <div class="contact-right">
+        <p>@2014</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

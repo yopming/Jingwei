@@ -1,13 +1,23 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Jingwei Styleguide
+tabenabled: overall
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="clearfix" id="overall">
+  <div class="left illu">
+    <img src="/image/gump.png" alt="Forrest Gump" />
+    <p class="quote">
+      Life was like a box of chocolates.<br>
+      You never know what you're gonna get.
+    </p>
+  </div>
+  <div class="left actions">
+    <a href="http://www.xyz.cn" target="_blank" class="button">xyz.cn</a>
+    <br>
+    <a href="https://github.com/yopming/jingwei" target="_blank" class="button blue">
+      Visit Jingwei Repo
+    </a>
+    <p>Current version: {{ site.currentversion }}</p>
+  </div>
 </div>

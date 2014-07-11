@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jingwei - Skeleton|组织结构</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/docs.css">
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+</head>
+<body id="jingwei">
+  <div id="header">
+    <div class="container">
+      <h1>Jingwei Styleguide</h1>
+    </div>
+  </div>
+
+  <div id="menu">
+    <div class="container">
+      <ul class="tabs">
+        <li >
+          <a href="/">Overall</a>
+        </li>
+        <li  class="active" >
+          <a href="/skeleton">Skeleton</a>
+        </li>
+        <li >
+          <a href="/elementary">Elementary</a>
+        </li>
+        <li >
+          <a href="/building">Building</a>
+        </li>
+        <li >
+          <a href="/dictionary">Dictionary</a>
+        </li>
+        <li >
+          <a href="/guide">Guide</a>
+        </li>
+        <li >
+          <a href="/whatsnew">What's New</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+
+      <li class="">
+        <a href="/skeleton/variable.html">变量（Variable）</a>
+      </li>
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/skeleton/structure.html">组织结构</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/skeleton/mixin.html">混入（Mixin）</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/skeleton/index.html">全局</a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="rodoc">
+  <!-- Skeleton< -->
+  <!-- skeleton -->
+  <!-- 11 Jul 2014 -->
+  <div class="post markdown">
+    <h1>组织结构</h1>
+
+<h2>目录</h2>
+
+<p>主工作路径为<code>apollo-master/apollo-static/src/main/webapp/assets</code>，下含less、css、psd、img四个目录。</p>
+
+<h3>less目录</h3>
+
+<p>存放的是基础less文件和页面less文件，为了区分基础文件和页面文件，所有被@import的less文件的前缀为<code>_</code>.<br>
+需要编译的目录为<code>/assets/less/webpages</code>和<code>/assets/less/_total</code>目录下的<code>skeleton.less</code>，<code>skeleton-x1200.less</code>和<code>skeleton-special.less</code>三个文件。</p>
+
+<h3>css目录</h3>
+
+<p>目录内全都是单页面less文件生成的，除了一个previous.css文件（精简之后的global.css，主要包含头部、底部和弹出层等的样式）之外，不要修改此目录下的文件，改了也会被覆盖。</p>
+
+<h3>psd目录</h3>
+
+<p>目录下大部分为拼图的源文件和需要经常维护的图片，留存psd方便修改，目录下readme.md文件记录了生成之后文件的存放位置，方便查找。</p>
+
+<h3>img目录</h3>
+
+<p>目录下按照目录存放了常用图片。 在修改此目录图片之前记得先去psd目录下寻找有没有同名的psd文件，一般拼图需要这么操作。</p>
+
+<h2>less文件以及命名方式</h2>
+
+<p><code>/assets/less</code>下的是基础less文件，按照用途来分文件夹存放。文档中每个大类都有一个文件夹，内含至少一个less文件。<br>
+<code>/assets/less/webpages</code>下的都是页面文件。<br>
+一个单独页面或者一整个模块（比如找回密码4个页面）使用一个less文件，命名尽量使用能代表页面或者模块意思的英文来命名。<br>
+如果一整个模块比较大的话，可以把less文件拆分，使用同一个文件前缀来保证文件的统一命名，比如join-reg.less, join-retrieve.less等，这些文件需要放在同一个目录下面，如<code>webpages/join/</code>。</p>
+
+<h2>less文件内部</h2>
+
+<p>页面头部一定要最先引入skeleton.less这个文件。</p>
+
+<p><img src="/image/less_file.png" alt="less文件内部" title="less文件内部"></p>
+
+<p>另外在引用文件的时候，如果某个目录下面存在一个和目录名称相同的less文件，那么这个文件代表是其他文件的基础，也就代表着两件事情：</p>
+
+<ol>
+<li>这个文件在使用当前目录中其他less样式的时候一定要引入，是必须的； </li>
+<li>引入的顺序一定是这个文件先于目录中其他文件，否则又要发生一些奇怪的事情。</li>
+</ol>
+
+<h2>过渡时期解决方案</h2>
+
+<p>由于存在新老页面交替的情况，有些页面使用less来组织，有些则不是，存在一个样式不统一的情况。所以把现有的骨架样式生成为css文件，让之前的全局样式global.css来import，保证了头部、页脚等公共部分的样式统一。</p>
+
+  </div>
+</div>
+
+</div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <div class="contact-left">
+        <p>
+          <a href="mailto:gengtieming@made-in-china.com">gengtieming</a>
+        </p>
+      </div>
+      <div class="contact-right">
+        <p>@2014</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

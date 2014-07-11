@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jingwei - {{ page.title }}|{{ page.name }}</title>
+  <title>Jingwei - Guide|规范</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="/css/base.css">
@@ -15,32 +15,32 @@
 <body id="jingwei">
   <div id="header">
     <div class="container">
-      <h1>{{ site.name }}</h1>
+      <h1>Jingwei Styleguide</h1>
     </div>
   </div>
 
   <div id="menu">
     <div class="container">
       <ul class="tabs">
-        <li {% if page.tabenabled == 'overall' %} class="active" {% endif %}>
+        <li >
           <a href="/">Overall</a>
         </li>
-        <li {% if page.tabenabled == 'skeleton' %} class="active" {% endif %}>
+        <li >
           <a href="/skeleton">Skeleton</a>
         </li>
-        <li {% if page.tabenabled == 'elementary' %} class="active" {% endif %}>
+        <li >
           <a href="/elementary">Elementary</a>
         </li>
-        <li {% if page.tabenabled == 'building' %} class="active" {% endif %}>
+        <li >
           <a href="/building">Building</a>
         </li>
-        <li {% if page.tabenabled == 'dictionary' %} class="active" {% endif %}>
+        <li >
           <a href="/dictionary">Dictionary</a>
         </li>
-        <li {% if page.tabenabled == 'guide' %} class="active" {% endif %}>
+        <li  class="active" >
           <a href="/guide">Guide</a>
         </li>
-        <li {% if page.tabenabled == 'whatsnew' %} class="active" {% endif %}>
+        <li >
           <a href="/whatsnew">What's New</a>
         </li>
       </ul>
@@ -49,7 +49,44 @@
 
   <div id="content">
     <div class="container">
-      {{ content }}
+      <div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/guide/index.html">规范</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/guide/guide-topic.html">专题规范</a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="rodoc">
+  <!-- Guide< -->
+  <!-- guide -->
+  <!-- 11 Jul 2014 -->
+  <div class="post markdown">
+    <h1>规范</h1>
+
+  </div>
+</div>
+
+</div>
+
+
     </div>
   </div>
 
