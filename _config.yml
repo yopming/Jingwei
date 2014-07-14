@@ -4,3 +4,5 @@ name: Jingwei Styleguide
 markdown: redcarpet
 pygments: true
 currentversion: 0.2.3
+
+safe: false

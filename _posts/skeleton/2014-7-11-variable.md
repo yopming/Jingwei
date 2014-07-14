@@ -1,10 +1,11 @@
 ---
 layout: post_skeleton
-name: 变量（Variable）
+sort: 3
+name: 变量 Variable
 categories: skeleton
 ---
 
-# Variable
+# 变量
 
 	less/_variable.less
 

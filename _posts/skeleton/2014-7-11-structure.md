@@ -1,6 +1,7 @@
 ---
 layout: post_skeleton
-name: 组织结构
+sort: 5
+name: 组织结构 Structure
 categories: skeleton
 ---
 
