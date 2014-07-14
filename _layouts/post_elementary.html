@@ -4,5 +4,5 @@ title: Elementary
 tabenabled: elementary
 ---
 
-{% assign sorted_posts = (site.categories.elementary | sort:'name') %}
-{% include post_markdown.html %}
+{% assign sorted_posts = (site.categories.elementary | sort:'sort') %}
+{% include post_navigation.html %}

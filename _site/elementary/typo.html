@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jingwei - Jingwei Styleguide|index.html</title>
+  <title>Jingwei - Elementary|排版 Typo</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="/assets/css/base.css">
@@ -22,13 +22,13 @@
   <div id="menu">
     <div class="container">
       <ul class="tabs">
-        <li  class="active" >
+        <li >
           <a href="/">Overall</a>
         </li>
         <li >
           <a href="/skeleton">Skeleton</a>
         </li>
-        <li >
+        <li  class="active" >
           <a href="/elementary">Elementary</a>
         </li>
         <li >
@@ -49,23 +49,66 @@
 
   <div id="content">
     <div class="container">
-      <div class="clearfix" id="overall">
-  <div class="left illu">
-    <img src="/image/gump.png" alt="Forrest Gump" />
-    <p class="quote">
-      Life was like a box of chocolates.<br>
-      You never know what you're gonna get.
-    </p>
+      
+<div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/index.html">基础元素 Elementary</a>
+      </li>
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/elementary/typo.html">排版 Typo</a>
+      </li>
+    
+    </ul>
   </div>
-  <div class="left actions">
-    <a href="http://www.xyz.cn" target="_blank" class="button">xyz.cn</a>
-    <br>
-    <a href="https://github.com/yopming/jingwei" target="_blank" class="button blue">
-      Visit Jingwei Repo
-    </a>
-    <p>Current version: 0.2.3</p>
+
+  <div class="rodoc">
+  <!-- Elementary< -->
+  <!-- elementary -->
+  <!-- 14 Jul 2014 -->
+  <div class="post markdown">
+    <h1>排版</h1>
+
+<p>定义了缩写、代码、删除线、强调、标题、带有副标题的标题、hr、列表、打印样式、引用、上下标、文本截断以及大段文字文章使用的样式（orig）。</p>
+
+<p><code>less/_typo/_typo.less</code></p>
+
+<p>常用的字体大小，左右对齐等样式都有自己的class，如果一个结构只有这一种要求样式，可以采用此类class，如果还有其他样式，尽量自定义class来赋予样式。</p>
+
+<h2>abbr</h2>
+
+<p><code>less/_typo/_abbr.less</code></p>
+
+<p>缩写格式，<code>abbr</code>的指针为问号形式。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;abbr title=&quot;etcteria&quot;&gt;etc.&lt;/abbr&gt;
+&lt;acronym title=&quot;world wide web&quot;&gt;www&lt;/acronym&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/abbr.html"></iframe>
+
+<h2>del</h2>
+
+<p><code>less/_typo/_del.less</code></p>
+
+<p>删除线</p>
+
   </div>
 </div>
+
+</div>
+
 
     </div>
   </div>

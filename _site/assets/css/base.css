@@ -58,6 +58,7 @@ a:hover {color:#0062BB;}
 .clearfix:after {display: block; content: ""; width: 0; height: 0; font-size: 0; clear: both; visibility: hidden; overflow: hidden;}
 .clearfix .left {float:left;}
 .clearfix .right {float:right;}
+pre, code {font-family:monaco, moonspace;}
 
 /* button */
 .button {
@@ -141,7 +142,6 @@ a:hover {color:#0062BB;}
 .documents .navigation .menu li a {display: block; padding: 8px 10px 8px 8px; text-shadow: 0 1px 0 #fff; border-left: 2px solid #fafafb; text-decoration:none;}
 .documents .navigation .menu li a:hover {background:#fdfdfe;}
 
-
 /* markdown */
 .markdown{font-size:15px;line-height:1.7;overflow:hidden;word-wrap:break-word}
 .markdown>*:first-child{margin-top:0 !important}
@@ -198,7 +198,7 @@ a:hover {color:#0062BB;}
 .markdown ol,
 .markdown dl,
 .markdown table,
-.markdown pre{margin:15px 0}
+.markdown pre{margin:15px 0 0;}
 .markdown ul,
 .markdown ol{padding-left:30px}
 .markdown ul.no-list,
@@ -253,3 +253,6 @@ a:hover {color:#0062BB;}
 .markdown pre code:after,
 .markdown pre tt:before,
 .markdown pre tt:after{content:normal}
+
+/* markdown extension */
+.markdown_example {border:1px solid #ddd; border-top:none; border-radius:3px; width:100%; box-sizing: border-box;}
