@@ -2,7 +2,7 @@ permalink: /:categories/:title.html
 
 name: Jingwei Styleguide
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 currentversion: 0.2.3
 
 safe: false

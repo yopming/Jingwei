@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jingwei - Elementary|链接 Link</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/docs.css">
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+
+</head>
+<body id="jingwei">
+  <div id="header">
+    <div class="container">
+      <h1>Jingwei Styleguide</h1>
+    </div>
+  </div>
+
+  <div id="menu">
+    <div class="container">
+      <ul class="tabs">
+        <li >
+          <a href="/">Overall</a>
+        </li>
+        <li >
+          <a href="/skeleton">Skeleton</a>
+        </li>
+        <li  class="active" >
+          <a href="/elementary">Elementary</a>
+        </li>
+        <li >
+          <a href="/building">Building</a>
+        </li>
+        <li >
+          <a href="/dictionary">Dictionary</a>
+        </li>
+        <li >
+          <a href="/guide">Guide</a>
+        </li>
+        <li >
+          <a href="/whatsnew">What's New</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      
+<div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/index.html">基础元素 Elementary</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/typo.html">排版 Typo</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/layout.html">结构 Layout</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/table.html">表格 Table</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/form.html">表单 Form</a>
+      </li>
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/elementary/link.html">链接 Link</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/list.html">列表 List</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/icon.html">图标 Icon</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/button.html">按钮 Button</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/color.html">颜色 Color</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/html5.html">HTML5</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/custom.html">自定义标签 Custom</a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="rodoc">
+  <!-- Elementary< -->
+  <!-- elementary -->
+  <!-- 15 Jul 2013 -->
+  <div class="post markdown">
+    <h1>链接</h1>
+
+<p>链接的基本样式定义在<code>_global.less</code>文件中，全局规则请谨慎修改。  </p>
+
+<h2>颜色</h2>
+
+<p><code>less/_link/_blue.less</code><br>
+<code>less/_link/_green.less</code><br>
+<code>less/_link/_red.less</code><br>
+<code>less/_link/_gray3.less</code><br>
+<code>less/_link/_gray4.less</code><br>
+<code>less/_link/_gray5.less</code><br>
+<code>less/_link/_gray6.less</code>  </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;a href=&quot;&quot; class=&quot;link-blue&quot;&gt;蓝色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;link-green&quot;&gt;绿色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;link-red&quot;&gt;红色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;link-gray3&quot;&gt;灰色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;link-gray4&quot;&gt;灰色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;link-gray5&quot;&gt;灰色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+&lt;a href=&quot;&quot; class=&quot;link-gray6&quot;&gt;灰色链接：你猜你猜你猜猜猜啊&lt;/a&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/link/color.html"></iframe>
+
+<h2>Visited</h2>
+
+<p><code>less/_link/_visited.less</code><br>
+资讯、文章、学堂等文章的列表在点击之后需要visited的颜色来识别是否已经看过。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;ul class=&quot;typo-orig link-visitedTank&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;http://techcenter.mic.com/jira&quot;&gt;出国留学，可以买你们的商旅护航吗？&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://techcenter.mic.com/dms&quot;&gt;套牌车可以理赔么&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://techcenter.mic.com&quot;&gt;前往申根国的必要保险&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;a href=&quot;http://techcenter.mic.com/confluence_dev&quot; class=&quot;link-visited&quot;&gt;
+    这是一个单独的链接
+&lt;/a&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/link/visited.html"></iframe>
+
+<h2>Document</h2>
+
+<p><code>less/_link/_document.less</code><br>
+文档中的某些链接需要默认状态下的下划线。可与颜色相关class相互叠加使用。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;p&gt;
+    活动对象为新一站会员（
+        &lt;a href=&quot;&quot; title=&quot;&quot; class=&quot;link-green link-doc&quot;&gt;免费注册&lt;/a&gt;
+    ），每个用户参加一次
+&lt;/p&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/link/document.html"></iframe>
+
+  </div>
+</div>
+
+</div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <div class="contact-left">
+        <p>
+          <a href="mailto:gengtieming@made-in-china.com">gengtieming</a>
+        </p>
+      </div>
+      <div class="contact-right">
+        <p>@2014</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/iframeheight.min.js"></script>
+  <script src="/assets/js/example.js"></script>
+</body>
+</html>

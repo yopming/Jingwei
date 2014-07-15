@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jingwei - Elementary|结构 Layout</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/docs.css">
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+
+</head>
+<body id="jingwei">
+  <div id="header">
+    <div class="container">
+      <h1>Jingwei Styleguide</h1>
+    </div>
+  </div>
+
+  <div id="menu">
+    <div class="container">
+      <ul class="tabs">
+        <li >
+          <a href="/">Overall</a>
+        </li>
+        <li >
+          <a href="/skeleton">Skeleton</a>
+        </li>
+        <li  class="active" >
+          <a href="/elementary">Elementary</a>
+        </li>
+        <li >
+          <a href="/building">Building</a>
+        </li>
+        <li >
+          <a href="/dictionary">Dictionary</a>
+        </li>
+        <li >
+          <a href="/guide">Guide</a>
+        </li>
+        <li >
+          <a href="/whatsnew">What's New</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      
+<div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/index.html">基础元素 Elementary</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/typo.html">排版 Typo</a>
+      </li>
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/elementary/layout.html">结构 Layout</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/table.html">表格 Table</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/form.html">表单 Form</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/link.html">链接 Link</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/list.html">列表 List</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/icon.html">图标 Icon</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/button.html">按钮 Button</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/color.html">颜色 Color</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/html5.html">HTML5</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/custom.html">自定义标签 Custom</a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="rodoc">
+  <!-- Elementary< -->
+  <!-- elementary -->
+  <!-- 15 Jul 2013 -->
+  <div class="post markdown">
+    <h1>结构</h1>
+
+<h2>栅格</h2>
+
+<p><code>.fence</code>和<code>.yard</code>定义栅格，具体的宽度表示在_global.less文件中。<br>
+栅格采用左右5px的间隙的设定。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;fence&quot;&gt;
+    &lt;div class=&quot;fence-thin&quot;&gt;
+        &lt;div class=&quot;yard-860&quot;&gt;860px wide&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;fence-wide&quot;&gt;
+        &lt;div class=&quot;yard-200&quot;&gt;200px&lt;/div&gt;
+        &lt;div class=&quot;yard-560&quot;&gt;560px&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>
+<h2>位移</h2>
+
+<p>某些页面要求元素的左边或者右边留出来一定空隙。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;fence&quot;&gt;
+    &lt;div class=&quot;fence-wide&quot;&gt;
+        &lt;div class=&quot;yard-200 pushLeft-240&quot;&gt;
+            pushLef-240
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>
+<h2>常用结构类</h2>
+
+<p>在某个元素只有下面class描述的单独一种样式的时候，使用下列class，如果还包含其他样式，就把结构相关样式添加到class当中。   </p>
+
+<ul>
+<li><code>.ly-clear</code> 空结构清除除浮动（尽量不要使用） </li>
+<li><code>.ly-clearFix</code> 伪类清除浮动 </li>
+<li><code>.ly-left</code> </li>
+<li><code>.ly-right</code> </li>
+<li><code>.ly-hide</code> </li>
+<li><code>.ly-none</code></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <div class="contact-left">
+        <p>
+          <a href="mailto:gengtieming@made-in-china.com">gengtieming</a>
+        </p>
+      </div>
+      <div class="contact-right">
+        <p>@2014</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/iframeheight.min.js"></script>
+  <script src="/assets/js/example.js"></script>
+</body>
+</html>

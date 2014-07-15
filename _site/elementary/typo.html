@@ -72,6 +72,86 @@
         <a href="/elementary/typo.html">排版 Typo</a>
       </li>
     
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/layout.html">结构 Layout</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/table.html">表格 Table</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/form.html">表单 Form</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/link.html">链接 Link</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/list.html">列表 List</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/icon.html">图标 Icon</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/button.html">按钮 Button</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/color.html">颜色 Color</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/html5.html">HTML5</a>
+      </li>
+    
+
+      
+      
+
+      <li class="">
+        <a href="/elementary/custom.html">自定义标签 Custom</a>
+      </li>
+    
     </ul>
   </div>
 
@@ -90,9 +170,8 @@
 
 <h2>abbr</h2>
 
-<p><code>less/_typo/_abbr.less</code></p>
-
-<p>缩写格式，<code>abbr</code>的指针为问号形式。</p>
+<p><code>less/_typo/_abbr.less</code><br>
+缩写格式，<code>abbr</code>的指针为问号形式。</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;abbr title=&quot;etcteria&quot;&gt;etc.&lt;/abbr&gt;
 &lt;acronym title=&quot;world wide web&quot;&gt;www&lt;/acronym&gt;
 </code></pre></div>
@@ -100,9 +179,182 @@
 
 <h2>del</h2>
 
-<p><code>less/_typo/_del.less</code></p>
+<p><code>less/_typo/_del.less</code><br>
+删除线</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;del&gt;To Be Deleted.&lt;/del&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/del.html"></iframe>
 
-<p>删除线</p>
+<h2>emphasis</h2>
+
+<p><code>less/_typo/_emphasis.less</code><br>
+强调</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;p&gt;This is the &lt;strong&gt;normal&lt;/strong&gt; and this is the &lt;small&gt;small&lt;/small&gt;.&lt;/p&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/emphasis.html"></iframe>
+
+<h2>heading</h2>
+
+<p><code>less/_typo/_heading.less</code><br>
+<code>less/_typo/_heading-support.less</code><br>
+标题和带有副标题的样式</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;typo-headingWith&quot;&gt;
+  &lt;h1 class=&quot;heading typo-size24&quot;&gt;Main Heading&lt;/h1&gt;
+  &lt;div class=&quot;support&quot;&gt;Seconday description and detail information.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1 class=&quot;typo-heading typo-size24&quot;&gt;Single Heading&lt;/h1&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/heading.html"></iframe>
+
+<h2>hr</h2>
+
+<p><code>less/_typo/_hr.less</code><br>
+分割线</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;hr class=&quot;typo-hrLine&quot; /&gt;
+&lt;hr class=&quot;typo-hrPush&quot; /&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/hr.html"></iframe>
+
+<h2>quote</h2>
+
+<p><code>less/_typo/_quote.less</code><br>
+引用</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;q&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/q&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/quote.html"></iframe>
+
+<h2>print</h2>
+
+<p><code>less/_typo/_print.less</code><br>
+打印样式</p>
+
+<p>不经过任何处理而直接打印网站上的页面会得到一个不理想的效果。可以简单的采用几个要点来使之达到较为合适的效果</p>
+
+<h2>sub sup</h2>
+
+<p><code>less/_typo/_sub-sup.less</code><br>
+上标下标</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;p&gt;&lt;sub&gt;当&lt;/sub&gt;你孤单你会想起谁&lt;sup&gt;TM&lt;/sup&gt;&lt;/p&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/subsup.html"></iframe>
+
+<h2>word-wrap</h2>
+
+<p><code>less/_typo/_word-wrap.less</code><br>
+强制换行</p>
+
+<p>在某些地方强制换行是必要的，为了不把页面结构撑开，但是一定要谨慎使用</p>
+
+<h2>orig-heading</h2>
+
+<p><code>less/_typo/_orig-heading.less</code><br>
+定义了大段排版中标题、列表、段落以及表格的默认样式，主要用来正文中使用</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;typo-orig&quot;&gt;
+  &lt;h1&gt;标题一&lt;/h1&gt;
+  &lt;h2&gt;标题二&lt;/h2&gt;
+  &lt;h3&gt;标题三&lt;/h3&gt;
+  &lt;h4&gt;标题四&lt;/h4&gt;
+  &lt;h5&gt;标题五&lt;/h5&gt;
+  &lt;h6&gt;标题六&lt;/h6&gt;
+&lt;/div&gt;
+
+&lt;h1 class=&quot;typo-orig-h1&quot;&gt;标题一&lt;/h1&gt;
+&lt;h2 class=&quot;typo-orig-h2&quot;&gt;标题二&lt;/h2&gt;
+&lt;h3 class=&quot;typo-orig-h3&quot;&gt;标题三&lt;/h3&gt;
+&lt;h4 class=&quot;typo-orig-h4&quot;&gt;标题四&lt;/h4&gt;
+&lt;h5 class=&quot;typo-orig-h5&quot;&gt;标题五&lt;/h5&gt;
+&lt;h6 class=&quot;typo-orig-h6&quot;&gt;标题六&lt;/h6&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/orig-heading.html"></iframe>
+
+<p><code>less/_typo/_orig-list.less</code>  </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;typo-orig&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;...&lt;/li&gt;
+    &lt;li&gt;
+      &lt;ol&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;...&lt;/li&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;ul class=&quot;typo-orig-ul&quot;&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ul&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class=&quot;typo-orig-ol&quot;&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;typo-orig&quot;&gt;
+  &lt;dl&gt;
+    &lt;dt&gt;...&lt;/dt&gt;
+    &lt;dd&gt;...&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+
+&lt;dl class=&quot;typo-orig-dl&quot;&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/orig-list.html"></iframe>
+
+<p><code>less/_typo/_orig-para.less</code>  </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;typo-orig&quot;&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;hr /&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;div class=&quot;declare&quot;&gt;...&lt;/div&gt;
+  &lt;p class=&quot;typo-orig-p&quot;&gt;...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;typo-orig-p&quot;&gt;...&lt;/p&gt;
+
+&lt;hr class=&quot;typo-orig-hr&quot; /&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/orig-para.html"></iframe>
+
+<p><code>less/_typo/_orig-table.less</code>  </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;div class=&quot;typo-orig&quot;&gt;
+  &lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;typo-orig-table&quot;&gt;
+  ...
+&lt;/table&gt;
+</code></pre></div>
+<iframe class="markdown_example" src="/example/elementary/typo/orig-table.html"></iframe>
 
   </div>
 </div>
@@ -127,8 +379,7 @@
   </div>
 
   <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/jquery.browser.js"></script>
-  <script src="/assets/js/jquery.iframe-auto-height.js"></script>
+  <script src="/assets/js/iframeheight.min.js"></script>
   <script src="/assets/js/example.js"></script>
 </body>
 </html>
