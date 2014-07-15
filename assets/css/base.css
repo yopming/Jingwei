@@ -213,7 +213,7 @@ pre, code {font-family:monaco, moonspace;}
 .markdown blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}
 .markdown blockquote>:first-child{margin-top:0}
 .markdown blockquote>:last-child{margin-bottom:0}
-.markdown table{width:100%;overflow:auto;display:block}
+.markdown table{width:100%;overflow:auto}
 .markdown table th{font-weight:bold}
 .markdown table th,
 .markdown table td{border:1px solid #ddd;padding:6px 13px}
