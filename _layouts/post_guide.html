@@ -4,5 +4,5 @@ title: Guide
 tabenabled: guide
 ---
 
-{% assign sorted_posts = (site.categories.guide | sort:'name') %}
-{% include post_markdown.html %}
+{% assign sorted_posts = (site.categories.guide | sort:'sort') %}
+{% include post_navigation.html %}

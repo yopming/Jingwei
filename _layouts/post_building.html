@@ -4,6 +4,6 @@ title: Building
 tabenabled: building
 ---
 
-{% assign sorted_posts = (site.categories.building | sort:'name') %}
-{% include post_markdown.html %}
+{% assign sorted_posts = (site.categories.building | sort:'sort') %}
+{% include post_navigation.html %}
 

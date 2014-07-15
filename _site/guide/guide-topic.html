@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Jingwei - Guide|专题规范</title>
+  <title>Jingwei - Guide|专题规范 Special</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="/assets/css/base.css">
@@ -50,7 +50,32 @@
   <div id="content">
     <div class="container">
       
-<div class="rodoc">
+<div class="documents clearfix">
+  <div class="navigation">
+    <ul class="menu">
+    
+
+      
+      
+
+      <li class="">
+        <a href="/guide/index.html">规范 Guide</a>
+      </li>
+    
+
+      
+      
+        
+      
+
+      <li class="current">
+        <a href="/guide/guide-topic.html">专题规范 Special</a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <div class="rodoc">
   <!-- Guide< -->
   <!-- guide -->
   <!-- 11 Jul 2014 -->
@@ -85,7 +110,7 @@
 
 <h2>专题模板</h2>
 
-<p>假设$TOPIC<em>NAME为专题名称，$TOPIC</em>TITLE为专题的title，$TOPIC<em>KEYWORDS与$TOPIC</em>DESCRIPTION为专题的SEO信息；</p>
+<p>假设<code>$TOPIC_NAME</code>为专题名称，<code>$TOPIC_TITLE</code>为专题的title，<code>$TOPIC_KEYWORDS</code>与<code>$TOPIC_DESCRIPTION</code>为专题的SEO信息；</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;cn&quot;&gt;
 &lt;head&gt;
@@ -117,7 +142,7 @@
 <h2>专题过期时间</h2>
 
 <p>有些专题有时效性，需要在过期时间之后显示弹出层的提示。
-$TOPIC_ENDTIME为专题的结束时间，格式为<code>2014-4-21</code>。</p>
+<code>$TOPIC_ENDTIME</code>为专题的结束时间，格式为<code>2014-4-21</code>。</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;jsp:include page=&quot;/WEB-INF/jspf/2012m/footer.jsp&quot;&gt;
   &lt;jsp:param value=&quot;2014-4-21&quot; name=&quot;specialEndtime&quot;/&gt;
 &lt;/jsp:include&gt;
@@ -130,6 +155,8 @@ $TOPIC_ENDTIME为专题的结束时间，格式为<code>2014-4-21</code>。</p>
 &lt;jsp:include page=&quot;../include/Apollo_JS.jsp&quot; /&gt;
 </code></pre></div>
   </div>
+</div>
+
 </div>
 
 

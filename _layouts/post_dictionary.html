@@ -4,5 +4,5 @@ title: Dictionary
 tabenabled: dictionary
 ---
 
-{% assign sorted_posts = (site.categories.dictionary | sort:'name') %}
-{% include post_markdown.html %}
+{% assign sorted_posts = (site.categories.dictionary | sort:'sort') %}
+{% include post_navigation.html %}

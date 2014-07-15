@@ -1,6 +1,7 @@
 ---
 layout: post_guide
-name:  专题规范
+sort: 2
+name: 专题规范 Special
 categories: guide
 ---
 
@@ -25,7 +26,7 @@ categories: guide
 在需求文档中会给出专题的URI，例如`http://www.xyz.cn/special/liuyi.html`，其中liuyi就是要求的专题名称，运营系统中的*目录名称*，*jsp名称*等都需要使用这个来命名，系统会根据liuyi.html来寻找liuyi目录下的liuyi.jsp文件。
 
 ## 专题模板
-假设$TOPIC_NAME为专题名称，$TOPIC_TITLE为专题的title，$TOPIC_KEYWORDS与$TOPIC_DESCRIPTION为专题的SEO信息；
+假设`$TOPIC_NAME`为专题名称，`$TOPIC_TITLE`为专题的title，`$TOPIC_KEYWORDS`与`$TOPIC_DESCRIPTION`为专题的SEO信息；
 
     <!DOCTYPE html>
     <html lang="cn">
@@ -56,7 +57,7 @@ categories: guide
 
 ## 专题过期时间
 有些专题有时效性，需要在过期时间之后显示弹出层的提示。
-$TOPIC_ENDTIME为专题的结束时间，格式为`2014-4-21`。
+`$TOPIC_ENDTIME`为专题的结束时间，格式为`2014-4-21`。
 
     <jsp:include page="/WEB-INF/jspf/2012m/footer.jsp">
       <jsp:param value="2014-4-21" name="specialEndtime"/>

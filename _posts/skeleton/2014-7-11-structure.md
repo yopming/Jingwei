@@ -36,7 +36,7 @@ categories: skeleton
 ## less文件内部
 页面头部一定要最先引入skeleton.less这个文件。
 
-![less文件内部](/image/less_file.png "less文件内部")
+![less文件内部](/assets/image/less_file.png "less文件内部")
 
 另外在引用文件的时候，如果某个目录下面存在一个和目录名称相同的less文件，那么这个文件代表是其他文件的基础，也就代表着两件事情：
 
