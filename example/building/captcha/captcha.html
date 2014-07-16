@@ -1,0 +1,43 @@
+---
+layout: iframe_layout
+---
+
+<table cellspacing="0" cellpadding="0" class="captcha">
+  <tr class="hold">
+    <td width="120">
+      <div>
+        <input type="text" id="verifyCode" name="verifyCode" class="typeIn"
+        onkeyup="" maxlength="4" />
+      </div>
+    </td>
+
+    <!-- 统一部分 开始 -->
+    <td class="imgCell">
+      <img id="safecode" class="img" src="/ImageServlet"
+      alt="请输入图片中的数字或字母" width="80" height="30" />
+    </td>
+    <td class="refreshCell" title="换一张图片">
+      <a href="javascript:reloadVerifyCode();" class="refresh">换一张图片</a>
+    </td>
+    <td class="sepCell">
+      <div class="sep"></div>
+    </td>
+    <td class="audioCell">
+      <div class="inner">
+        <span id="play" class="audioWrap">
+          <a id="helper" href="javascript:playSound();"
+            title="听清并键入您听到的数字或字母" class="audio">
+            听清并键入您听到的数字或字母
+          </a>
+        </span>
+      </div>
+    </td>
+    <!-- 统一部分 结束 -->
+
+  </tr>
+  <tr class="msg">
+    <td colspan="3" class="inputArea">
+      <div style="display:none" class="onError" id="verifyCode_Tip">请填写验证码。</div>
+    </td>
+  </tr>
+</table>

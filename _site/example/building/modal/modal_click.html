@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    abbr {
+      cursor:help;
+    }
+  </style>
+</head>
+<body>
+  <span class="btn btn-shine-default">
+  <button id="DOC-modal" class="btn-inner">打开弹出框</button>
+</span>
+
+<script>
+// modal
+$("#DOC-modal").click(function() {
+    $('.modal-back').show();
+    $('#DOC-modal-object').css({
+        'position':'fixed',
+        'left':'50%',
+        'top':'25%',
+        'margin-left':(-$('#DOC-modal-object').width()/2)
+    }).show();
+});
+$("#bx_closePop_qlogin2").click(function() {
+    $('.modal-back').hide();
+    $('#DOC-modal-object').hide();
+});
+
+</script>
+
+</body>
+</html>
