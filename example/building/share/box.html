@@ -1,0 +1,90 @@
+---
+layout: iframe_layout
+---
+
+<div class="share">
+    <input type="hidden" value="foo" id="dev_title">
+    <input type="hidden" value="foo" id="dev_isnotsina_title">
+    <input type="hidden" value="foo" id="recommendUrl">
+    <span class="shareSNS"></span>
+</div>
+
+<script>
+// share
+(function($) {
+    var link = [{name: "新浪微博",sharetype: 1,icon: "sina",tip: "新浪微博分享",url: "http://service.weibo.com/share/share.php"}, {name: "邮件分享",sharetype: 2,icon: "email",tip: "邮件分享",url: "http://www.xzy.cn/prodshare.do?xcase=shareEmail"}, {name: "腾讯微博",sharetype: 3,icon: "tengxunweibo",tip: "腾讯微博分享",url: "http://v.t.qq.com/share/share.php"}, {name: "淘江湖",sharetype: 4,icon: "taobao",tip: "淘江湖分享",url: "http://share.jianghu.taobao.com/share/addShare.htm"}, {name: "QQ空间",sharetype: 5,icon: "qqzone",tip: "QQ空间分享",url: "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey"}, {name: "人人网",sharetype: 6,icon: "renren",tip: "人人网分享",url: "http://share.renren.com/share/buttonshare.do"}, {name: "百度搜藏",sharetype: 7,icon: "baiducang",tip: "百度搜藏分享",url: "http://cang.baidu.com/do/add"}, {name: "豆瓣网",sharetype: 8,icon: "douban",tip: "豆瓣网分享",url: "https://www.douban.com/accounts/login"}, {name: "开心网",sharetype: 9,icon: "kaixin",tip: "开心网分享",url: "http://www.kaixin001.com/login/open_login.php?flag=1"}, {name: "网易微博",sharetype: 10,icon: "wangyi",tip: "网易微博分享",url: "http://t.163.com/article/user/checkLogin.do"}];
+    var shareSNS = function(config) {
+        var me = this;
+        this._init = function() {
+            me.threshold = config.threshold || 200;
+            config.shortLink = config.shortLink < link.length ? config.shortLink : 4;
+            var title = "高洁";
+            var url = encodeURIComponent(location);
+            config.obj.parent().append(me.shareBox = $('<div style="visibility: hidden;" id="sharebox"><div id="ats_inner"><div id="ats_head" class="fn-clear"><span class="fl">分享</span> <a class="link-green" target="_blank" href="http://www.xyz.cn/help/detail-110113.html">分享规则  &gt;</a></div><div id="at_hover"></div></div></div>'));
+            this.itemBox = this.shareBox.find("#at_hover:first");
+            var count = 0;
+            $(link).each(function(index, item) {
+                if (count < config.shortLink) {
+                    if (item.sharetype == "2") {
+                        config.obj.append('<a href="javascript:void(0)" sharetype=' + item.sharetype + ' rel="nofollow" title="' + (item.tip) + '" class="dev_share_email_cj ' + item.icon + '">' + item.name + "</a>")
+                    } else {
+                        config.obj.append('<a href="javascript:void(0)" sharetype=' + item.sharetype + ' rel="nofollow" title="' + (item.tip) + '" class="dev_share_flag ' + item.icon + '" data="' + item.url + '">' + item.name + "</a>")
+                    }
+                    count++
+                }
+                if (item.sharetype == "2") {
+                    me.itemBox.append('<a href="javascript:void(0)" sharetype=' + item.sharetype + ' rel="nofollow" title="' + (item.tip) + '" class="dev_share_email_cj ' + item.icon + '" data="' + item.url + '">' + item.name + "</a>")
+                } else {
+                    me.itemBox.append('<a href="javascript:void(0)" sharetype=' + item.sharetype + ' rel="nofollow" title="' + (item.tip) + '" class="dev_share_flag ' + item.icon + '" data="' + item.url + '">' + item.name + "</a>")
+                }
+            });
+            config.obj.append('<a class="shareAll" href="javascript:void(0);"><span>更多</span></a>');
+            this.shareBox.find("#atsptx:first").click(function() {
+                me._hide()
+            })
+        };
+        this.show = function() {
+            if (this.shareBox) {
+                if (this.timer) {
+                    clearTimeout(this.timer)
+                }
+                var curObjOffset = config.obj.offset();
+                var itemHeight = this.itemBox.outerHeight(true);
+                var visualHeight = document.documentElement.clientHeight;
+                var curObjVisualTop = parseInt(curObjOffset.top) - parseInt(jQuery(document).scrollTop());
+                var top = (visualHeight - curObjVisualTop) > 30 + config.obj.height() + itemHeight ? curObjOffset.top + config.obj.height() : curObjOffset.top - itemHeight - config.obj.height() - 25;
+                this.shareBox.css("visibility", "visible");
+                this.shareBox.unbind().hover(function() {
+                    me.show()
+                }, function() {
+                    me.lazyHide()
+                })
+            } else {
+                this._init()
+            }
+        };
+        this._hide = function() {
+            this.shareBox.css("visibility", "hidden")
+        };
+        this.lazyHide = function() {
+            this.timer = setTimeout(function() {
+                me._hide()
+            }, this.threshold)
+        };
+        this._init()
+    };
+    $.fn.shareSNS = function(config) {
+        return this.each(function() {
+            config = jQuery.extend({obj: $(this),container: $("body"),shortLink: 4,threshold: 200}, config);
+            var shareSNSPlugin = new shareSNS(config);
+            $(this).find(".shareAll:first").hover(function() {
+                shareSNSPlugin.show()
+            }, function() {
+                shareSNSPlugin.lazyHide()
+            })
+        })
+    }
+})(jQuery);
+
+$(".shareSNSed").shareSNS();
+</script>
