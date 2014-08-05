@@ -86,6 +86,9 @@ pre, code {font-family:monaco, moonspace;}
 .documents .navigation {float:left; width:200px; margin-right:20px;}
 .documents .rodoc {float:left; width:980px;}
 
+.documents .navigation.fixed {position:fixed; top:20px;}
+.documents .rodoc.fixed {margin-left:220px;}
+
 .documents .navigation .menu {background: #fafafb; border-radius: 3px; border: 1px solid #d8d8d8; list-style: none; overflow: hidden;}
 .documents .navigation .menu li {border-bottom: 1px solid #eee;}
 .documents .navigation .menu li.current {background: #fff; border-left: 2px solid #d26911; font-weight: bold; color: #222; cursor: default}
