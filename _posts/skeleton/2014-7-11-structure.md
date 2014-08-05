@@ -13,8 +13,14 @@ categories: skeleton
 
 
 ### less目录
-存放的是基础less文件和页面less文件，为了区分基础文件和页面文件，所有被@import的less文件的前缀为`_`.  
-需要编译的目录为`/assets/less/webpages`和`/assets/less/_total`目录下的`skeleton.less`，`skeleton-x1200.less`和`skeleton-special.less`三个文件。
+存放的是基础less文件和页面less文件，为了区分基础文件和页面文件，所有被@import的less文件的前缀为`_`。
+
+`_plugins`目录下面的less文件为Javascript插件的样式，需要配合样式Javascript才会正常工作。
+
+需要编译的目录为`/assets/less/webpages`和`/assets/less/_total`目录下的`_skeleton.less`，`_skeleton-x1200.less`和`_skeleton-special.less`三个文件，编译生成的文件需要把文件名称前面的`_`去除。
+
+编译之后的对应目录请参考[ID汇总](/dictionary/ID.html)
+
 
 ### css目录
 目录内全都是单页面less文件生成的，除了一个previous.css文件（精简之后的global.css，主要包含头部、底部和弹出层等的样式）之外，不要修改此目录下的文件，改了也会被覆盖。
